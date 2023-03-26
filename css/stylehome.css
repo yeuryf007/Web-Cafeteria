@@ -10,21 +10,21 @@ header{
     padding: 0;
     height: 300px;
     width: 100%;
+    overflow: hidden;
 }
 
 .topbar{
-    position: absolute;
     color: white;
     display: flex;
     flex-direction: row;
     width: 100%;
-    overflow: hidden;
+    
 }
 
 .titulo{
     align-items: center;
     justify-content: center;
-
+    color: white;
 }
 
 .bg-image {
@@ -40,8 +40,13 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
+main{
+    margin-top: auto;
+
+}
 .boton1{
     border: 0;
     background-color: transparent;
@@ -72,9 +77,31 @@ body{
     cursor: pointer;
 }
 
+.boton3{
+    box-sizing: border-box;
+    width: 203px;
+    height: 59px;
+    background: transparent;
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: white;
+    margin-left: 20px;
+    font-size:  x-large;
+}
+.boton3:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+}
 
 #navgen{
     font-size: x-large;
     margin-right: 0;
     margin-left: auto;
+}
+
+footer{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
 }
