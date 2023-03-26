@@ -3,7 +3,7 @@ html{
 }
 
 header{
-    position: absolute;
+    background-image: url("../imagenes/bagraun.png");
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -11,6 +11,7 @@ header{
     height: 300px;
     width: 100%;
     overflow: hidden;
+    background-size: cover;
 }
 
 .topbar{
@@ -18,7 +19,6 @@ header{
     display: flex;
     flex-direction: row;
     width: 100%;
-    
 }
 
 .titulo{
@@ -99,8 +99,15 @@ main{
     margin-left: auto;
 }
 
+
+main{
+    background-color: #FF8C42;
+}
+
 footer{
+    background-image: url("../imagenes/cafeteriafooter.png");
     overflow: hidden;
+    background-size: cover;
     display: flex;
     flex-direction: row;
     height: 150px;
