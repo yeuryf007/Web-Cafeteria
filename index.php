@@ -23,13 +23,13 @@
             <!--
                 el enlace del boton de ingreso se pega al boton de carrito, hay que hacerle hide al boton de carrito hasta que alguien ingrese
             -->
-            <a href="ingreso.php">
+            <a class="a-button" href="ingreso.php">
                 <button class="boton2">
                     <i class="fa-solid fa-user" style="color: #ffffff;"></i>
                     Ingreso 
                 </button>
             </a>
-            <a href="carrito.php">
+            <a class="a-button" href="carrito.php">
                 <button class="boton2">
                     <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                     Carrito
@@ -40,8 +40,8 @@
         <div class="titulo">
             <h1>Cafeteria Deluxe</h1>
             <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>
-            <a href="menu.php"><button class="boton3">Menú</button></a>
-            <a href="reservas.php"><button class="boton3">Reservas</button></a>
+            <a class="a-button" href="menu.php"><button class="boton3">Menú</button></a>
+            <a class="a-button" href="reservas.php"><button class="boton3">Reservas</button></a>
         </div>
     </header>
     <main>

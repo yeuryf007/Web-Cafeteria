@@ -24,10 +24,14 @@ header{
     z-index: 999;
 }
 
+.a-button{
+    display: inline-block;
+    border-radius: 13px;
+}
+
 .titulo{
     align-items: center;
     justify-content: center;
-    color: white;
     margin-bottom: 200px;
     margin-top: auto;
     margin-left: 8%;
@@ -36,13 +40,20 @@ header{
 }
 
 .titulo>h1{
-    font-size: 80px;
+    font-size: 120px;
+    color: #FF8C42;
     font-family: "Dancing Script";
     margin-bottom: 0;
+    line-height: 115px;
+    font-weight: 400;
 }
 
 .titulo>p{
-    font-size: x-large;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
 }
 
 .bg-image {
@@ -134,6 +145,7 @@ main p{
     margin-left: 5px;
     font-size:  large;
     font-family: 'Quicksand';
+    margin: 0;
 }
 .boton2:hover{
     background-color: #FF8C42;
@@ -148,10 +160,12 @@ main p{
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: #FF8C42;
-    margin-right: 20px;
     font-size:  x-large;
     align-self: center;
+    padding: 10px;
+    margin: 0;
 }
+
 .boton3:hover{
     background-color: #FF8C42;
     cursor: pointer;
