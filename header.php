@@ -10,7 +10,7 @@
             <!--
                 el enlace del boton de ingreso se pega al boton de carrito, hay que hacerle hide al boton de carrito hasta que alguien ingrese
             -->
-            <a class="a-button" href="ingreso.php">
+            <a class="a-button" href="signup.php">
                 <button class="boton2">
                     <i class="fa-solid fa-user" style="color: #ffffff;"></i>
                     Ingreso 

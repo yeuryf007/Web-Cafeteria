@@ -3,8 +3,11 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    
     <link type="text/css" rel="stylesheet" href="css/stylehome.css">
+    <link rel="stylesheet" href="css/stylesignup.css">
     <link href="https://fonts.cdnfonts.com/css/quicksand" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/87238b4970.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,20 +20,22 @@
 include_once 'header.php';
 ?>
         <div class="titulo">
-            <h1>Cafeteria Deluxe</h1>
-            <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>
-            <a class="a-button" href="menu.php"><button class="boton3">Menú</button></a>
-            <a class="a-button" href="reservas.php"><button class="boton3">Reservas</button></a>
+            <h1>Sign up</h1>
         </div>
     </header>
     <main>
-        <img id="mostrador" src="imagenes/mostrador-cafeteria.jpg" alt=""></img>
-            
-        <div>
-            <h2>Acerca de<img id="granos" src="imagenes/granos.png" alt=""></img></h2>
-            
-            <p>Bienvenido a xd cafe, su lugar favorito para disfrutar de comida deliciosa y fresca en un ambiente acogedor. Estamos dedicados a proporcionar a nuestros clientes comidas de alta calidad que sean nutritivas y satisfactorias. <br><br> En xd cafe, creemos que la comida debe ser deliciosa y saludable. Es por eso que obtenemos nuestros ingredientes de granjas y proveedores locales siempre que sea posible, y hacemos todo desde cero en nuestra cocina. Nuestro menú cambia regularmente para reflejar las estaciones y mostrar los mejores ingredientes disponibles.</p>
+    <form class="formulario" action="signup.inc.php" method="post">
+        <div class="textbox" id="divida">
+        <input placeholder="Primer nombre..." type="text" name="nombre" required>
+        <input placeholder="Contraseña..." type="password" name="password" required>
+        <input placeholder="Verificar contraseña..." type="text" name="repassword" required>
+        <input placeholder="Correo..." type="email" name="email" required>
+        <input placeholder="Telefono..." type="text"  name="numero" required>
+        <input placeholder="Direccion" type="text" name="direccion" required>
+        <a class="a-button" href=""><button class="boton" name="submit" type="submit">Registrarse</button></a>
         </div>
+        
+      </form>
     </main>
 </body>
     <?php

@@ -24,14 +24,30 @@ header{
     z-index: 999;
 }
 
-.titulo{
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 200px;
-    margin-top: auto;
-    margin-left: 8%;
-    width: 50%;
+.aa{
+    display: inline-block;
 }
+
+.boton{
+    box-sizing: border-box;
+    width: 300px;
+    height: 59px;
+    background-color: #ff8c42;
+    border-radius: 13px;
+    color: black;
+    font-size:  x-large;
+    align-self: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.boton:hover{
+    background: transparent;
+    border: 1px solid #FF8C42;
+    cursor: pointer;
+    color: #FF8C42;
+}
+
 
 .titulo>h1{
     font-size: 120px;
@@ -41,3 +57,39 @@ header{
     line-height: 115px;
     font-weight: 400;
 }
+.formulario{
+
+    height: 900px;
+    width: 700px;
+    border-radius: 5px;
+    margin-top: 300px;
+}
+#divida{
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.textbox input {
+    text-align: left;
+    border: none;
+    outline: none;
+    background: none;
+    color: #2cd1fa;
+    font-size: 18px;
+    width: 67%;
+    float: left;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2cd1fa;
+    padding:9px;
+  }
+  main{
+    background-color: #F5EEE6;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
