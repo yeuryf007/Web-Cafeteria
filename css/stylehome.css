@@ -1,0 +1,80 @@
+html{
+    width: 100%;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 100%;
+}
+
+.topbar{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titulo{
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bg-image {
+    opacity: 0.25;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    top: -50px;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.boton1{
+    border: 0;
+    background-color: transparent;
+    color: white;
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
+    font-size: x-large;
+}
+
+.boton1:hover{
+    text-decoration: underline;
+}
+
+.boton2{
+    box-sizing: border-box;
+    width: 203px;
+    height: 59px;
+    background: rgba(255, 140, 66, 0.24);
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: white;
+    margin-left: 5px;
+    font-size:  x-large;
+}
+.boton2:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+}
+
+
+#navgen{
+    font-size: x-large;
+    margin-right: 0;
+    margin-left: auto;
+}
