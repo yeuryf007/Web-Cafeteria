@@ -65,6 +65,7 @@ main{
     width: fit-content;
     height: fit-content;
     font-size: x-large;
+    font-family: 'Quicksand';
 }
 
 .boton1:hover{
@@ -81,6 +82,7 @@ main{
     color: white;
     margin-left: 5px;
     font-size:  x-large;
+    font-family: 'Quicksand';
 }
 .boton2:hover{
     background-color: #FF8C42;
