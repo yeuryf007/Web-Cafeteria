@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link type="text/css" rel="stylesheet" href="css/stylehome.css">
     <link href="https://fonts.cdnfonts.com/css/quicksand" rel="stylesheet">
     <script src="https://kit.fontawesome.com/87238b4970.js" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@
             <a href="menu.php"><button class="boton1">Menú</button></a>
             <a href="miperfil.php"><button class="boton1">Mi perfil</button></a>
             <!--
-                el enlace del boton de ingreso se pega al boton de carrito, hay que hacerle hice al boton de carrito hasta que alguien ingrese
+                el enlace del boton de ingreso se pega al boton de carrito, hay que hacerle hide al boton de carrito hasta que alguien ingrese
             -->
             <a href="ingreso.php">
                 <button class="boton2">
@@ -51,14 +52,22 @@
     </main>
 </body>
     <footer>
-        <div></div>
+        <div>
+            <h2>Visitanos aquí</h2>
+            <!--Introducier google maps o imagen de ubicacion-->
+        </div>
         <nav>
-            <a href="index.php"><button>Home</button></a>
-            <a href="reservas.php"><button>Reservas</button></a>
-            <a href="menu.php"><button>Menú</button></a>
-            <a href="miperfil.php"><button>Mi perfil</button></a>
+            <h3>Navegación</h3>
+            <a href="index.php">Home</a>
+            <a href="reservas.php">Reservas</a>
+            <a href="menu.php">Menú</a>
+            <a href="miperfil.php">Mi perfil</a>
         </nav>
-        <div></div>
+        <div>
+            <h3>Contacto</h3>
+            <p>Telefono: 123456789</p>
+            <p>Correo:
+        </div>
         <div></div>
     </footer>
 </html>
