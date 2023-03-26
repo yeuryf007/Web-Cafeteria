@@ -19,6 +19,7 @@ header{
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: fixed;
 }
 
 .titulo{
@@ -54,9 +55,35 @@ body{
 }
 
 main{
-    margin-top: auto;
-
+    background-color: #F5EEE6;
+    color: black;
+    height: 700px;
 }
+
+main img{
+    width: 50px;
+    height: 30px;
+}
+
+main div{
+    background-color: white;
+    width: 30%;
+    margin-left: 47%;
+    margin-top: 5%;
+    padding: 2% 1% 2% 1%;
+}
+
+main h2{
+    font-family: "Dancing Script";
+    font-size: 45px;
+    margin: 0;
+}
+
+main p{
+    margin-top: 0;
+    font-size: large;
+}
+
 .boton1{
     border: 0;
     background-color: transparent;
@@ -113,10 +140,6 @@ main{
     margin-left: auto;
 }
 
-
-main{
-    background-color: #FF8C42;
-}
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");

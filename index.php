@@ -45,10 +45,10 @@
         </div>
     </header>
     <main>
-        <div>
             <img src="imagenes/granos.png" alt=""></img>
+        <div>
             <h2>Acerca de</h2>
-            <p>Bienvenido a xd cafe, su lugar favorito para disfrutar de comida deliciosa y fresca en un ambiente acogedor. Estamos dedicados a proporcionar a nuestros clientes comidas de alta calidad que sean nutritivas y satisfactorias.En xd cafe, creemos que la comida debe ser deliciosa y saludable. Es por eso que obtenemos nuestros ingredientes de granjas y proveedores locales siempre que sea posible, y hacemos todo desde cero en nuestra cocina. Nuestro menú cambia regularmente para reflejar las estaciones y mostrar los mejores ingredientes disponibles.</p>
+            <p>Bienvenido a xd cafe, su lugar favorito para disfrutar de comida deliciosa y fresca en un ambiente acogedor. Estamos dedicados a proporcionar a nuestros clientes comidas de alta calidad que sean nutritivas y satisfactorias. <br><br> En xd cafe, creemos que la comida debe ser deliciosa y saludable. Es por eso que obtenemos nuestros ingredientes de granjas y proveedores locales siempre que sea posible, y hacemos todo desde cero en nuestra cocina. Nuestro menú cambia regularmente para reflejar las estaciones y mostrar los mejores ingredientes disponibles.</p>
         </div>
     </main>
 </body>
