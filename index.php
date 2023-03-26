@@ -35,9 +35,9 @@
             </a>
             </nav>
         </div>
-        <div>
+        <div class="titulo">
             <h1>Cafeteria Deluxe</h1>
-            <p>La vida es como una taza de café tú eliges si Io quieres dulce o amargo, frio o caliente, solo o acompañado.</p>
+            <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>
             <a href="menu.php"><button class="boton3">Menú</button></a>
             <a href="reservas.php"><button class="boton3">Reservas</button></a>
         </div>
