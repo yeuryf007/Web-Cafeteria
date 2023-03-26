@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link type="text/css" rel="stylesheet" href="css/stylehome.css">
     <link href="https://fonts.cdnfonts.com/css/quicksand" rel="stylesheet">
