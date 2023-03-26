@@ -3,13 +3,13 @@
             <h2>Visitanos aquí</h2>
             <!--Introducier google maps o imagen de ubicacion-->
         </div>
-        <nav>
+        <div>
             <h3>Navegación</h3> 
             <a href="index.php">Home</a>
             <a href="reservas.php">Reservas</a>
             <a href="menu.php">Menú</a>
             <a href="miperfil.php">Mi perfil</a>
-        </nav>
+</div>
         <div>
             <h3>Contacto</h3>
             <a href=""><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> Correo@correo.com</a>
