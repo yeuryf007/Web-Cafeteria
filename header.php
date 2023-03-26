@@ -24,10 +24,3 @@
             </a>
             </nav>
         </div>
-        <div class="titulo">
-            <h1>Cafeteria Deluxe</h1>
-            <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>
-            <a class="a-button" href="menu.php"><button class="boton3">Menú</button></a>
-            <a class="a-button" href="reservas.php"><button class="boton3">Reservas</button></a>
-        </div>
-    </header>

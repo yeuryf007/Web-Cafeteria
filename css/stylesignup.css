@@ -23,3 +23,21 @@ header{
     background-color: #342928ae;
     z-index: 999;
 }
+
+.titulo{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+    margin-top: auto;
+    margin-left: 8%;
+    width: 50%;
+}
+
+.titulo>h1{
+    font-size: 120px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: 0;
+    line-height: 115px;
+    font-weight: 400;
+}
