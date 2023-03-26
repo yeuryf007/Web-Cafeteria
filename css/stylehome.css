@@ -30,9 +30,12 @@ header{
     margin-top: auto;
     margin-left: 8%;
     width: 50%;
+    
 }
 .titulo>h1{
     font-size: 80px;
+    font-family: "Dancing Script";
+    margin-bottom: 0;
 }
 
 .titulo>p{
@@ -67,7 +70,7 @@ main img{
 
 main div{
     background-color: white;
-    width: 30%;
+    width: 31%;
     margin-left: 47%;
     margin-top: 5%;
     padding: 2% 1% 2% 1%;
@@ -75,7 +78,7 @@ main div{
 
 main h2{
     font-family: "Dancing Script";
-    font-size: 45px;
+    font-size: 50px;
     margin: 0;
 }
 
@@ -88,10 +91,10 @@ main p{
     border: 0;
     background-color: transparent;
     color: white;
-    padding: 25px;
+    padding: 15px;
     width: fit-content;
     height: fit-content;
-    font-size: x-large;
+    font-size: large;
     font-family: 'Quicksand';
 }
 
@@ -101,14 +104,14 @@ main p{
 
 .boton2{
     box-sizing: border-box;
-    width: 203px;
-    height: 59px;
+    width: 189px;
+    height: 45px;
     background: rgba(255, 140, 66, 0.24);
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: white;
     margin-left: 5px;
-    font-size:  x-large;
+    font-size:  large;
     font-family: 'Quicksand';
 }
 .boton2:hover{
@@ -148,4 +151,14 @@ footer{
     display: flex;
     flex-direction: row;
     height: 150px;
+}
+
+footer div{
+    margin-right: 3%;
+}
+
+footer nav{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
 }

@@ -58,7 +58,7 @@
             <!--Introducier google maps o imagen de ubicacion-->
         </div>
         <nav>
-            <h3>Navegación</h3>
+            <h3>Navegación</h3> 
             <a href="index.php">Home</a>
             <a href="reservas.php">Reservas</a>
             <a href="menu.php">Menú</a>
