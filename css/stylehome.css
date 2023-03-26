@@ -4,6 +4,7 @@ html{
 
 header{
     background-image: url("../imagenes/bagraun.png");
+    background-color: #1e1e1e;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -36,7 +37,6 @@ header{
     margin-top: auto;
     margin-left: 8%;
     width: 50%;
-    
 }
 
 .titulo>h1{
@@ -54,14 +54,6 @@ header{
     font-weight: 400;
     font-size: 20px;
     color: #ffffff;
-}
-
-.bg-image {
-    opacity: 0.25;
-    position: absolute;
-    pointer-events: none;
-    width: 100%;
-    top: -50px;
 }
 
 body{

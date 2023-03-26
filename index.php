@@ -12,31 +12,10 @@
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <div class="topbar">    
-            <div class="logo">Logo Empresa</div>
-            <nav class="nav" id="navgen">
-            <a href="index.php"><button class="boton1">Home</button></a>
-            <a href="reservas.php"><button class="boton1">Reservas</button></a>
-            <a href="menu.php"><button class="boton1">Menú</button></a>
-            <a href="miperfil.php"><button class="boton1">Mi perfil</button></a>
-            <!--
-                el enlace del boton de ingreso se pega al boton de carrito, hay que hacerle hide al boton de carrito hasta que alguien ingrese
-            -->
-            <a class="a-button" href="ingreso.php">
-                <button class="boton2">
-                    <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-                    Ingreso 
-                </button>
-            </a>
-            <a class="a-button" href="carrito.php">
-                <button class="boton2">
-                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                    Carrito
-                </button>
-            </a>
-            </nav>
-        </div>
+
+<?php
+include_once 'header.php';
+?>
         <div class="titulo">
             <h1>Cafeteria Deluxe</h1>
             <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>
@@ -54,29 +33,7 @@
         </div>
     </main>
 </body>
-    <footer>
-        <div>
-            <h2>Visitanos aquí</h2>
-            <!--Introducier google maps o imagen de ubicacion-->
-        </div>
-        <div>
-            <h3>Navegación</h3> 
-            <a href="index.php">Home</a>
-            <a href="reservas.php">Reservas</a>
-            <a href="menu.php">Menú</a>
-            <a href="miperfil.php">Mi perfil</a>
-        </div>
-        <div>
-            <h3>Contacto</h3>
-            <a href=""><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> Correoverdadero@mail.com</a>
-            <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 123-456-7891</p>
-            <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Calle freidy el profe, #el final</p>
-        </div>
-        <div>
-            <h3>Redes sociales</h3>
-            <a href=""><i class="redes fa-brands fa-square-facebook" style="color: #ffffff;"></i></a>
-            <a href=""><i class="redes fa-brands fa-square-instagram" style="color: #ffffff;"></i></a>
-            <a href=""><i class="redes fa-brands fa-square-twitter" style="color: #ffffff;"></i></a>
-        </div>
-    </footer>
+    <?php
+    include_once 'footer.php';
+    ?>
 </html>
