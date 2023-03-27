@@ -139,6 +139,12 @@ main{
     border: 0;
 }
 
+#boton3:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #FF8C42;
+}
+
 #navgen{
     font-size: x-large;
     margin-right: 0;
