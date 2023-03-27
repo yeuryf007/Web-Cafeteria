@@ -66,10 +66,13 @@ body{
 main{
     background-color: #F5EEE6;
     background-size: cover;
+}
+#cuerpo{
     height: fit-content;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    width: 1000px;
 }
 
 #main2{
@@ -155,20 +158,44 @@ main{
 .table{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 450px;
+    margin: 25px;
 }
 
 li{
+    margin: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 1%;
+    margin: 2%;
+}
+.menus{
     background-color: white;
     color: black;
     font-size:  large;
     font-family: 'Quicksand';
     border-radius: 13px;
+    margin: 2%;
 }
 
-li h2{
+.menus img{
+    width: 100%;
+    height: 250px;
+    border-radius: 13px 13px 0 0;
+    margin:auto;
+}
+
+.menus h2{
     font-size: 70px;
     font-family: "Dancing Script";
+    margin: 0;
+    padding-left: 6%;
+    padding-right: 2%;
 }
 
 .boton1{
