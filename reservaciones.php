@@ -24,26 +24,27 @@
     <main>
         <div id="reserva">
             <h2>Reservación de mesa</h2>
-
-            <table class="div1">
-                <tr>
-                    <td><i class="fa-solid fa-user-group iconores"></i></td>
-                    <td><div class="div1"><input type="text" class="inputres" placeholder="2 personas"></td>
-                </tr>
-                <tr>
-                    <td><i class="fa-solid fa-calendar-days iconores"></i></td>
-                    <td><input type="text" class="inputres" placeholder="Mañana"></td>
-                </tr>
-                <tr>
-                    <td><i class="fa-regular fa-clock iconores"></i></td>
-                    <td><input type="text" class="inputres" placeholder="7:00 pm"></td>
-                </tr>
-                <tr>
-                    <td><i class="fa-regular fa-message iconores"></i></td>
-                    <td><textarea style="resize:none; width:100%; margin-bottom: 10px; margin-top: 10px;"></textarea></td>
-                </tr>
-            </table>
-            <button id="boton3">Reservar</button>
+            <form action="" method="post">
+                <table class="div1">
+                    <tr>
+                        <td><i class="fa-solid fa-user-group iconores"></i></td>
+                        <td><div class="div1"><input type="number"  min="1" max="15" class="inputres" placeholder="Nro personas"></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-calendar-days iconores"></i></td>
+                        <td><input type="date" class="inputres" placeholder="Mañana"></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-regular fa-clock iconores"></i></td>
+                        <td><input type="time" min="09:00" max="20:00" class="inputres"></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-regular fa-message iconores"></i></td>
+                        <td><textarea style="resize:none; width:450px; margin-bottom: 10px; margin-top: 10px;"></textarea></td>
+                    </tr>
+                </table>
+                <button id="boton3">Reservar</button>
+            </form>
         </div>
     </main>
 </body>

@@ -78,13 +78,18 @@ main{
 }
 
 #reserva h2{
-    align-self: flex-start;
     font-family: 'Quicksand';
     font-weight: bold;
     font-style: normal;
     margin-left: 10px;
     margin-top: 15px;
     margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div1{
@@ -96,25 +101,37 @@ main{
 
 .div1 tr td{
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
 .inputres{
-    height: 30px;
-    width: 100%;
+    height: 40px;
+    width: 450px;
     font-size: x-large;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .iconores{
     font-size: 35px;
     text-align: center;
+    margin-right: 10px;
 }
+
 #reserva textarea{
     margin-bottom: 25px;
     height: 80px;
     width: 100%;
     font-size: large;
 }
+
 .boton1{
     border: 0;
     background-color: transparent;
