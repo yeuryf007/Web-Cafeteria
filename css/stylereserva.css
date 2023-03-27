@@ -36,12 +36,11 @@ header{
     margin-top: auto;
 }
 
-.titulo>h1{
+.titulo h1{
     font-size: 100px;
     color: #FF8C42;
     font-family: "Dancing Script";
-    margin-bottom: 0;
-    line-height: 115px;
+    margin-bottom: -20px;
     font-weight: 400;
 }
 
