@@ -18,18 +18,34 @@
         ?>
     
         <div class="titulo">
-            <h1>Reservas</h1>
+            <h1>Menú</h1>
         </div>
     </header>
     <main>
-        <div id="reserva">
-            <h2><strong>Reservación de mesa</strong></h2>
-            <input type="text" class="inputres">
-            <input type="text" class="inputres">
-            <input type="text" class="inputres">
-            <textarea></textarea>
-            <button id="boton3">Reservar</button>
-        </div>
+    Bebidas:
+
+Café americano
+Té negro
+Té verde
+Agua mineral
+Refresco de cola
+Jugo de naranja
+Desayunos:
+
+Huevos revueltos con tostadas
+Pan tostado con mantequilla y mermelada
+Yogur con granola y frutas
+Almuerzos:
+
+Sándwich de jamón y queso
+Ensalada césar con pollo a la plancha
+Hamburguesa con papas fritas
+Pasta con salsa de tomate y albóndigas
+Postres:
+
+Brownie de chocolate
+Galletas de avena con pasas
+Helado de vainilla con caramelo
     </main>
 </body>
     <?php
