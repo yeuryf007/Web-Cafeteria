@@ -19,7 +19,7 @@
     
         <div class="titulo">
             <h1>Menú</h1>
-            <h2><a href="ordenar.php">Ordenar</a></h2>
+            <h2><button>Ordenar</button></h2>
         </div>
         
     </header>
