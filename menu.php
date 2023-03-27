@@ -3,7 +3,7 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <link type="text/css" rel="stylesheet" href="css/stylereserva.css">
+    <link type="text/css" rel="stylesheet" href="css/stylemenu.css">
     <link href="https://fonts.cdnfonts.com/css/quicksand" rel="stylesheet">
     <script src="https://kit.fontawesome.com/87238b4970.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -22,7 +22,8 @@
         </div>
     </header>
     <main>
-        <ul>
+        <div class="table">
+           <ul>
             <li>
                 <h2>Entradas</h2>
                 <ul>
@@ -51,8 +52,10 @@
                     <li>Helado de vainilla con caramelo</li>
                 </ul>
             </li>
-        </ul>
-        <ul>
+        </ul> 
+        </div>
+        <div class="table">
+           <ul>
             <li>
                 <h2>Bebidas</h2>
                 <ul>
@@ -73,7 +76,9 @@
                     <li>Sal</li>
                 </ul>
             </li>
-        </ul>
+        </ul> 
+        </div>
+        
     </main>
 </body>
     <?php
