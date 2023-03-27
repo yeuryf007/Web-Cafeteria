@@ -22,8 +22,8 @@
         </div>
     </header>
     <main>
-        <div class="table">
-           <ul>
+        <button>Ordenar</button>
+        <ul>
             <li>
                 <h2>Entradas</h2>
                 <ul>
