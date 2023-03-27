@@ -22,6 +22,7 @@
         </div>
     </header>
     <main>
+        <button>Ordenar</button>
         <ul>
             <li>
                 <h2>Entradas</h2>
