@@ -6,7 +6,7 @@
         <div>
             <h3>Navegación</h3> 
             <a href="index.php">Home</a>
-            <a href="reservas.php">Reservas</a>
+            <a href="reservaciones.php">Reservas</a>
             <a href="menu.php">Menú</a>
             <a href="miperfil.php">Mi perfil</a>
 </div>
