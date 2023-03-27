@@ -47,7 +47,6 @@
                             <li>Filete de pescado</li>
                             <li>Chuleta de cerdo</li>
                             <li>Chuleta de res</li>
-                            <li>Ribeye</li>
                         </ul>
                 </div>
                 <div class="menus">
@@ -57,8 +56,6 @@
                             <li>Brownie de chocolate</li>
                             <li>Galletas de avena con pasas</li>
                             <li>Helado de vainilla con caramelo</li>
-                            <li>Cheesecake</li>
-                            <li>Tarta de fresa de chocolate blanco</li>
                         </ul>
                 </div>
             </div>
