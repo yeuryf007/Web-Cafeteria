@@ -44,6 +44,14 @@ header{
     font-weight: 400;
 }
 
+.titulo h2{
+    font-size: 24px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: -20px;
+    font-weight: 400;
+}
+
 
 body{
     background-color: black;
@@ -65,7 +73,7 @@ main{
 .table{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 25%;
 }
 li{
     background-color: white;

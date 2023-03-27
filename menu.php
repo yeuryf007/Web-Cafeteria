@@ -19,10 +19,12 @@
     
         <div class="titulo">
             <h1>Menú</h1>
+            <h2><a href="ordenar.php">Ordenar</a></h2>
         </div>
+        
     </header>
     <main>
-        <button>Ordenar</button>
+        <div class="table">
         <ul>
             <li>
                 <h2>Entradas</h2>
