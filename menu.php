@@ -80,8 +80,12 @@
             </li>
         </ul> 
         </div>
-        
     </main>
+    <script>
+        jQuery(document).ready(function($){
+            $('.menu').addClass('active');
+        });
+    </script>
 </body>
     <?php
     include_once 'footer.php';
