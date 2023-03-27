@@ -17,10 +17,10 @@
         include_once 'header.php';
         ?>
         <div class="titulo">
-        <?php
-            if (isset($_SESSION["user"])) {
-                echo "<p id='usunom'>Bienvenido " . $_SESSION["user"]."</p>";
-            }
+            <?php
+                if (isset($_SESSION["user"])) {
+                    echo "<p id='usunom'>Bienvenido " . $_SESSION["user"]."</p>";
+                }
             ?>
             <h1>Cafeteria Deluxe</h1>
             <p>La vida es como una taza de café... Tú eliges si Io quieres dulce o amargo, frío o caliente, solo o acompañado.</p>

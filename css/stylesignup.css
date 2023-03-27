@@ -83,13 +83,14 @@ header{
     width: 67%;
     float: left;
     margin-bottom: 30px;
-    border-bottom: 1px solid #2cd1fa;
+    border-bottom: 2px solid #ff8d43;
     padding:9px;
-  }
-  main{
-    background-color: #F5EEE6;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+main{
+  background-color: #F5EEE6;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
