@@ -130,7 +130,13 @@ main{
 }
 
 #boton3{
-    
+    border-radius: 13px;
+    background-color: #FF8C42;
+    font-size:  large;
+    font-family: 'Quicksand';
+    height: 40px;
+    width: 100px;
+    border: 0;
 }
 
 #navgen{
