@@ -23,11 +23,26 @@
     </header>
     <main>
         <div id="reserva">
-            <h2><strong>Reservación de mesa</strong></h2>
-            <input type="text" class="inputres">
-            <input type="text" class="inputres">
-            <input type="text" class="inputres">
-            <textarea></textarea>
+            <h2>Reservación de mesa</h2>
+
+            <table class="div1">
+                <tr>
+                    <td><i class="fa-solid fa-user-group iconores"></i></td>
+                    <td><div class="div1"><input type="text" class="inputres" placeholder="2 personas"></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-calendar-days iconores"></i></td>
+                    <td><input type="text" class="inputres" placeholder="Mañana"></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-regular fa-clock iconores"></i></td>
+                    <td><input type="text" class="inputres" placeholder="7:00 pm"></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-regular fa-message iconores"></i></td>
+                    <td><textarea style="resize:none; width:100%; margin-bottom: 10px; margin-top: 10px;"></textarea></td>
+                </tr>
+            </table>
             <button id="boton3">Reservar</button>
         </div>
     </main>
