@@ -12,10 +12,10 @@
     <title>Home</title>
 </head>
 <body>
-
-<?php
-include_once 'header.php';
-?>
+    <header>
+        <?php
+        include_once 'header.php';
+        ?>
     
         <div class="titulo">
             <h1>Reservas</h1>
@@ -32,9 +32,7 @@ include_once 'header.php';
         </div>
     </main>
 </body>
-
-<?php
-include_once 'footer.php';
-?>
-    </footer>
+    <?php
+    include_once 'footer.php';
+    ?>
 </html>

@@ -33,9 +33,7 @@
         </div>
     </main>
 </body>
-<?php
-include_once 'footer.php';
-?>
-    </footer>
-    </footer>
+    <?php
+    include_once 'footer.php';
+    ?>
 </html>
