@@ -20,9 +20,8 @@
     
         <div class="titulo">
             <h1>Menú</h1>
-            <h2><button id="ordenar">Ordenar</button></h2>
         </div>
-        
+        <button id="ordenar">Ordenar</button>
     </header>
     <main>
         <div id="cuerpo">
@@ -77,11 +76,9 @@
                 <img src="imagenes/crema.png">
                     <h2>Extras</h2>
                     <ul>
-                        <li>Queso</li>
-                        <li>Champiñones</li>
-                        <li>Chile</li>
-                        <li>Crema</li>
-                        <li>Sal</li>
+                        <li>Arroz</li>
+                        <li>Papas fritas</li>
+                        <li>Plátano frito</li>
                     </ul>
                 </div>
 
@@ -92,8 +89,8 @@
     <script>
         $(document).ready(function(){
             $('#ordenar').click(function(){
-                $('.table').hide(1000);
-                $('main').load('ordenar.php').hide().fadeIn(1000);
+                $('.table').hide();
+                $('main').load('ordenar.php');
             });
         });
     </script>

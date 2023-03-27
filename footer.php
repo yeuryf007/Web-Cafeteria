@@ -18,8 +18,8 @@
     </div>
     <div>
         <h3>Redes sociales</h3>
-        <a href=""><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a>
-        <a href=""><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a>
-        <a href=""><i class="fa-brands fa-square-twitter" style="color: #ffffff;"></i></a>
+        <a href=""><i class="redes fa-brands fa-square-facebook" style="color: #ffffff;"></i></a>
+        <a href=""><i class="redes fa-brands fa-square-instagram" style="color: #ffffff;"></i></a>
+        <a href=""><i class="redes fa-brands fa-square-twitter" style="color: #ffffff;"></i></a>
     </div>
 </footer>

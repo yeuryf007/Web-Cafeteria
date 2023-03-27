@@ -32,26 +32,31 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 100px;
-    margin-top: auto;
 }
 
 .titulo h1{
     font-size: 100px;
     color: #FF8C42;
     font-family: "Dancing Script";
-    margin-bottom: -20px;
     font-weight: 400;
 }
 
-.titulo a{
-    font-size: 24px;
+#ordenar{
+    background-color: #FF8C42;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    font-size:  x-large;
     align-self: center;
+    padding: 5px 15px 5px 15px;
+    margin: 0;
+}
+
+#ordenar:hover{
+    background: transparent;
     color: #FF8C42;
-    font-family: "Dancing Script";
-    margin-bottom: -20px;
-    font-weight: 400;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -66,7 +71,10 @@ body{
 main{
     background-color: #F5EEE6;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
+
 #cuerpo{
     height: fit-content;
     display: flex;
@@ -236,7 +244,6 @@ ul{
     margin-right: 0;
     margin-left: auto;
 }
-
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");
