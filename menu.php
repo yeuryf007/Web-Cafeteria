@@ -22,30 +22,58 @@
         </div>
     </header>
     <main>
-    Bebidas:
-
-Café americano
-Té negro
-Té verde
-Agua mineral
-Refresco de cola
-Jugo de naranja
-Desayunos:
-
-Huevos revueltos con tostadas
-Pan tostado con mantequilla y mermelada
-Yogur con granola y frutas
-Almuerzos:
-
-Sándwich de jamón y queso
-Ensalada césar con pollo a la plancha
-Hamburguesa con papas fritas
-Pasta con salsa de tomate y albóndigas
-Postres:
-
-Brownie de chocolate
-Galletas de avena con pasas
-Helado de vainilla con caramelo
+        <ul>
+            <li>
+                <h2>Entradas</h2>
+                <ul>
+                    <li>Ensalada de tomate y cebolla</li>
+                    <li>Ensalada de col y zanahoria</li>
+                    <li>Ensalada de lechuga y pepino</li>
+                    <li>Ensalada de espinaca y aguacate</li>
+                    <li>Ensalada de lechuga y tomate</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Platos fuertes</h2>
+                <ul>
+                    <li>Pollo a la plancha</li>
+                    <li>Carne asada</li>
+                    <li>Filete de pescado</li>
+                    <li>Chuleta de cerdo</li>
+                    <li>Chuleta de res</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Postres</h2>
+                <ul>
+                    <li>Brownie de chocolate</li>
+                    <li>Galletas de avena con pasas</li>
+                    <li>Helado de vainilla con caramelo</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Bebidas</h2>
+                <ul>
+                    <li>Coca-Cola</li>
+                    <li>Sprite</li>
+                    <li>Fanta</li>
+                    <li>Agua</li>
+                    <li>Agua de jamaica</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Extras</h2>
+                <ul>
+                    <li>Queso</li>
+                    <li>Champiñones</li>
+                    <li>Chile</li>
+                    <li>Crema</li>
+                    <li>Sal</li>
+                </ul>
+            </li>
+        </ul>
     </main>
 </body>
     <?php
