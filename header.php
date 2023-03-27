@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-    <header>
         <div class="topbar">    
             <div class="logo">Logo Empresa</div>
             <nav class="nav" id="navgen">
@@ -32,3 +28,12 @@ session_start();
             
             </nav>
         </div>
+<!--
+    <a class="a-button" href="carrito.php">
+        <button class="boton2">
+            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+            Carrito
+        </button>
+    </a>
+-->
+    

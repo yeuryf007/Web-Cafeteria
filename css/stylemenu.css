@@ -1,0 +1,288 @@
+html{
+    width: 100%;
+}
+
+header{
+    background-image: url("../imagenes/bagraun.png");
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.topbar{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    background-color: #342928ae;
+    z-index: 999;
+}
+
+.a-button{
+    display: inline-block;
+    border-radius: 13px;
+}
+
+.titulo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: auto;
+}
+
+.titulo h1{
+    font-size: 100px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: -20px;
+    font-weight: 400;
+}
+
+.titulo a{
+    font-size: 24px;
+    align-self: center;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: -20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+body{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main{
+    background-color: #F5EEE6;
+    background-size: cover;
+}
+#cuerpo{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1000px;
+}
+
+#main2{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+#main2 nav button{
+    background-color: #F5EEE6;
+    border-radius: 13px;
+    font-size:  large;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    padding: 10px;
+    border: 0;
+}
+
+#main2 nav button:hover{
+    cursor: pointer;
+    background-color: #FF8C42;
+}
+
+#comidas-div{
+    place-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#entradasdiv, #platosfuertesdiv, #postresdiv, #bebidasdiv, #extrasdiv{
+    width: 1200px;
+}
+
+.comida{
+    background-color: #ffffff;
+    color: #000000;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    height: 300px;
+    width: 500px;
+    border-radius: 13px;
+    font: 'Quicksand';
+    padding: 20px;
+}
+
+.comida h2{
+    font-size: 30px;
+    font-family: "quicksand";
+    margin: 0;
+}
+
+.comida p{
+    font-size: 18px;
+    font-family: 'Quicksand';
+    margin: 5px;
+    text-align: center;
+}
+
+.comida button{
+    border-radius: 13px;
+    background-color: #FF8C42;
+    font-size:  large;
+    font-family: 'Quicksand';
+    height: 40px;
+    width: 100px;
+    border: 0;
+    margin-top: 10px;
+}
+
+.comida button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #FF8C42;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 25px;
+}
+
+li{
+    margin: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 1%;
+    margin: 2%;
+}
+.menus{
+    background-color: white;
+    color: black;
+    font-size:  large;
+    font-family: 'Quicksand';
+    border-radius: 13px;
+    margin: 2%;
+}
+
+.menus img{
+    width: 100%;
+    height: 250px;
+    border-radius: 13px 13px 0 0;
+    margin:auto;
+}
+
+.menus h2{
+    font-size: 70px;
+    font-family: "Dancing Script";
+    margin: 0;
+    padding-left: 6%;
+    padding-right: 2%;
+}
+
+.boton1{
+    border: 0;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    font-family: 'Quicksand';
+}
+
+.boton1:hover{
+    text-decoration: underline;
+}
+
+.boton2{
+    box-sizing: border-box;
+    width: 189px;
+    height: 45px;
+    background: rgba(255, 140, 66, 0.24);
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: white;
+    margin-left: 5px;
+    font-size:  large;
+    font-family: 'Quicksand';
+    margin: 0;
+}
+.boton2:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+}
+
+#navgen{
+    font-size: x-large;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
+footer{
+    background-image: url("../imagenes/cafeteriafooter.png");
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: center;
+    padding-top: 70px;
+    font-family: 'Quicksand';
+}
+
+footer div:last-child{
+    margin-right: 0;
+}
+
+footer div{
+    margin-right: 10%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer div a{
+    color: #ffffff;
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+footer div:nth-child(2) a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.redes{
+    font-size: xx-large;
+    margin-left: 5px;
+}
+
+footer div:first-child{
+    margin-top: -10px;
+}
