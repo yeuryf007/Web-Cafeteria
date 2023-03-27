@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,18 +25,48 @@ include_once 'header.php';
         </div>
     </header>
     <main>
-    <form class="formulario" action="signup.inc.php" method="post">
+    <form class="formulario" action="includes/signup.inc.php" method="post">
         <div class="textbox" id="divida">
-        <input placeholder="Primer nombre..." type="text" name="nombre" required>
-        <input placeholder="Contraseña..." type="password" name="password" required>
-        <input placeholder="Verificar contraseña..." type="text" name="repassword" required>
-        <input placeholder="Correo..." type="email" name="email" required>
-        <input placeholder="Telefono..." type="text"  name="numero" required>
-        <input placeholder="Direccion" type="text" name="direccion" required>
-        <a class="a-button" href=""><button class="boton" name="submit" type="submit">Registrarse</button></a>
-        </div>
+        <input placeholder="Primer nombre..." type="text" name="name" >
+        <input placeholder="Correo..." type="email" name="email" >
+        <input placeholder="Contraseña..." type="password" name="password" >
+        <input placeholder="Verificar contraseña..." type="password" name="repassword" >
+        <input placeholder="Telefono..." type="text"  name="telefono" >
+        <input placeholder="Direccion" type="text" name="direccion" >
+        <button class="boton" name="submit" type="submit">Registrarse</button>
+        <br>
+        Ya tienes una cuenta? <a href="login.php">Ingresa aqui</a>
+        <?php
+      if(isset($_GET["error"])){
+        if($_GET["error"]=="emptyinput"){
+            echo "<p> Llena todos los campos :P </p>";
+        }
+        else if($_GET["error"]=="invalidname"){
+            echo "<p> Escribe un nombre valido :P </p>";
+        }
+        else if($_GET["error"]=="invalidemail"){
+            echo "<p> Escribe un correo valido :P </p>";
+        }
+        else if($_GET["error"]=="passwordsdontmatch"){
+            echo "<p> Las contrasenas no son iguales :P </p>";
+        }
+        else if($_GET["error"]=="stmtfailed"){
+            echo "<p> Oops algo salio mal :C </p>";
+        }
+        else if($_GET["error"]=="nametaken"){
+            echo "<p> Ya ese nombre se encuentra registrado </p>";
+        }
+        else if($_GET["error"]=="none"){
+            echo "<p> Usuario registrado </p>";
+        }
+
+      }
+      
+      ?>    
+    </div>
         
       </form>
+
     </main>
 </body>
     <?php
