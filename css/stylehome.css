@@ -221,3 +221,8 @@ footer div:nth-child(2) a{
 footer div:first-child{
     margin-top: -10px;
 }
+#usunom{
+    font-size: 54px;
+    color: #42d3ff;
+    font-family: "Dancing Script";
+}
