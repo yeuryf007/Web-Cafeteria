@@ -29,8 +29,6 @@ header{
 }
 
 .titulo{
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
@@ -39,6 +37,7 @@ header{
     color: #FF8C42;
     font-family: "Dancing Script";
     font-weight: 400;
+    margin: 100px 0 10px 0;
 }
 
 #ordenar{
