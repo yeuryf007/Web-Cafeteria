@@ -72,11 +72,92 @@ main{
     align-items: center;
 }
 
+#main2{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+#main2 nav button{
+    background-color: #F5EEE6;
+    border-radius: 13px;
+    font-size:  large;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    padding: 10px;
+    border: 0;
+}
+
+#main2 nav button:hover{
+    cursor: pointer;
+    background-color: #FF8C42;
+}
+
+#comidas-div{
+    place-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#entradasdiv, #platosfuertesdiv, #postresdiv, #bebidasdiv, #extrasdiv{
+    width: 1200px;
+}
+
+.comida{
+    background-color: #ffffff;
+    color: #000000;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    height: 300px;
+    width: 500px;
+    border-radius: 13px;
+    font: 'Quicksand';
+    padding: 20px;
+}
+
+.comida h2{
+    font-size: 30px;
+    font-family: "quicksand";
+    margin: 0;
+}
+
+.comida p{
+    font-size: 18px;
+    font-family: 'Quicksand';
+    margin: 5px;
+    text-align: center;
+}
+
+.comida button{
+    border-radius: 13px;
+    background-color: #FF8C42;
+    font-size:  large;
+    font-family: 'Quicksand';
+    height: 40px;
+    width: 100px;
+    border: 0;
+    margin-top: 10px;
+}
+
+.comida button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #FF8C42;
+}
+
 .table{
     display: flex;
     flex-direction: column;
     width: 25%;
 }
+
 li{
     background-color: white;
     color: black;
