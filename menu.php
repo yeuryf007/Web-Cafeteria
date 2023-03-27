@@ -47,7 +47,7 @@
                             <li>Filete de pescado</li>
                             <li>Chuleta de cerdo</li>
                             <li>Chuleta de res</li>
-                            <li>Ojo de costilla</li>
+                            <li>Ribeye</li>
                         </ul>
                 </div>
                 <div class="menus">
