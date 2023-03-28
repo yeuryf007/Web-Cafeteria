@@ -19,78 +19,68 @@
         ?>
     
         <div class="titulo">
-            <h1>Menú</h1>
+            <h1 id="titulo">Menú</h1>
         </div>
         <button id="ordenar">Ordenar</button>
     </header>
     <main>
-        <div id="cuerpo">
-            <div class="table">
-                <div class="menus">
-                    <img src="imagenes/ensalada.png">
-                    <h2>Entradas</h2>
-                    <ul>
-                        <li>Ensalada de tomate y cebolla</li>
-                        <li>Ensalada de col y zanahoria</li>
-                        <li>Ensalada de lechuga y pepino</li>
-                        <li>Ensalada de espinaca y aguacate</li>
-                        <li>Ensalada de lechuga y tomate</li>
-                    </ul>
-                </div>
-                    
-                <div class="menus">
-                <img src="imagenes/ribeye.png">
-                    <h2>Platos fuertes</h2>
-                        <ul>
-                            <li>Pollo a la plancha</li>
-                            <li>Carne asada</li>
-                            <li>Filete de pescado</li>
-                            <li>Chuleta de cerdo</li>
-                            <li>Chuleta de res</li>
-                        </ul>
-                </div>
-                <div class="menus">
-                <img src="imagenes/tarta fresa.png">
-                    <h2>Postres</h2>
-                        <ul>
-                            <li>Brownie de chocolate</li>
-                            <li>Galletas de avena con pasas</li>
-                            <li>Helado de vainilla con caramelo</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="table">
-            <div class="menus">
-            <img src="imagenes/jugos.png">
-                    <h2>Bebidas</h2>
-                        <ul>
-                            <li>Jugo de naranja</li>
-                            <li>Jugo de piña</li>
-                            <li>Jugo de mango</li>
-                            <li>Jugo de papaya</li>
-                            <li>Jugo de uva</li>
-                        </ul>
-            </div>
-                
-                <div class="menus">
-                <img src="imagenes/crema.png">
-                    <h2>Extras</h2>
-                    <ul>
-                        <li>Arroz</li>
-                        <li>Papas fritas</li>
-                        <li>Plátano frito</li>
-                    </ul>
-                </div>
-
-                
-            </div>
-        </div>
+        
     </main>
     <script>
         $(document).ready(function(){
+            $('main').load('mainmenu.php');
             $('#ordenar').click(function(){
-                $('.table').hide();
-                $('main').load('ordenar.php');
+                if($('#ordenar').text() == 'Ordenar'){
+                    $('#ordenar').text('Menú');
+                    $('#titulo').text('Ordenar');
+                    $('mainmenu.php').hide(1000);
+                    $('main').load('ordenar.php');
+                    $('#platosfuertesdiv').hide();
+                    $('#postresdiv').hide();
+                    $('#bebidasdiv').hide();
+                    $('#extrasdiv').hide();
+                }
+                else{
+                    $('#ordenar').text('Ordenar');
+                    $('#titulo').text('Menú');
+                    $('ordenar.php').fadeOut();
+                    $('main').load('mainmenu.php').fadein();
+                }
+            });
+            $('#entradas').click(function(){
+                $('#entradasdiv').show();
+                $('#platosfuertesdiv').hide();
+                $('#postresdiv').hide();
+                $('#bebidasdiv').hide();
+                $('#extrasdiv').hide();
+            });
+            $('#platosfuertes').click(function(){
+                $('#entradasdiv').hide();
+                $('#platosfuertesdiv').show();
+                $('#postresdiv').hide();
+                $('#bebidasdiv').hide();
+                $('#extrasdiv').hide();
+            });
+            $('#postres').click(function(){
+                $('#entradasdiv').hide();
+                $('#platosfuertesdiv').hide();
+                $('#postresdiv').show();
+                $('#bebidasdiv').hide();
+                $('#extrasdiv').hide();
+            });
+            $('#bebidas').click(function(){
+                $('#entradasdiv').hide();
+                $('#platosfuertesdiv').hide();
+                $('#postresdiv').hide();
+                $('#bebidasdiv').show();
+                $('#extrasdiv').hide();
+            });
+            $('#extras').click(function(){
+                $('#entradasdiv').hide();
+                $('#platosfuertesdiv').hide();
+                $('#postresdiv').hide();
+                $('#bebidasdiv').hide();
+                $('#extrasdiv').show();
             });
         });
     </script>
