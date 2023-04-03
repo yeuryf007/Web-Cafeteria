@@ -121,24 +121,35 @@
                 }
             });
             $('#entradas').click(function(){
-                <?php
+                $('#comidas-div').html('<?php
                     $serverName = "localhost";
                     $dBUsername = "root";
                     $dBPassword = "";
                     $dBName = "ecommerce";
                     
+                    $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
                     
-                    $conn = mysqli_connect($serverName, $dBUsername,$dBPassword, $dBName);
-                    
-                    if(!$conn){
-                       die("Conexion Fallo: " . mysqli_connect_error()); 
+                    if (!$conn) {
+                        die("Conexion Fallo: " . mysqli_connect_error());
                     }
                     
-
-                ?>
-                $('#comidas-div').html(
-                    '<div class="comida"><h2></h2><p></p><p>Precio<br>$</p><button class="order-button" id="">Agregar</button></div>'
-                );
+                    $sql = "SELECT * FROM `productos` WHERE `descripcion` = 'entrada'";
+                    
+                    $result = mysqli_query($conn, $sql);
+                    
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id_producto = $row['id_producto'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        $descripcion = $row['descripcion'];
+                        $stock = $row['stock'];
+                        
+                        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+                    }
+                    
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                ?>');
             });
             $('#platosfuertes').click(function(){
                 $('#entradasdiv').hide();
