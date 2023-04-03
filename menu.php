@@ -237,6 +237,7 @@
     </main>
     <script>
         $(document).ready(function(){
+            /**/
             $('#main2').hide();
             $('#ordenar').click(function(){
                 if($('#ordenar').text() == 'Ordenar'){
