@@ -1,6 +1,5 @@
 <?php
 function emptyInputSignup($name, $email, $password, $repassword, $telefono, $direccion) {
-    $result;
     if(empty($name) || empty($email) || empty($password) || empty($repassword) || empty($telefono) || empty($direccion)){
        $result=true; 
     }
@@ -11,7 +10,6 @@ function emptyInputSignup($name, $email, $password, $repassword, $telefono, $dir
 }
 
 function invalidName($name) {
-    $result; 
     if (!preg_match("/^[a-zA-Z0-9]*$/", $name)) {
         $result = true;
     }
@@ -22,7 +20,6 @@ function invalidName($name) {
 }
 
 function invalidEmail($email) {
-    $result; 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
         }
@@ -33,7 +30,6 @@ function invalidEmail($email) {
 }
 
 function pwdMatch($password, $repassword) {
-    $result; 
     if ($password !== $repassword) {
         $result = true;
         }
@@ -81,7 +77,6 @@ function createUser($conn, $name, $email, $password, $telefono, $direccion) {
     exit();
 }
 function emptyInputLogin($name, $password){
-    $result;
     if(empty($name)||empty($password)){
        $result=true; 
     }
@@ -107,7 +102,43 @@ function loginUser($conn, $name, $password){
     else{
         session_start();
         $_SESSION["user"]= $uidExists["nombre"];
+        $GLOBALS['ids']= $uidExists["id_usuario"];
         header("location: ../index.php");
         exit();
     }
+}
+function emptyInputReserva($numerop, $date, $time){
+    if(empty($numerop)||empty($date)||empty($time)){
+        $result=true; 
+     }
+     else{
+         $result=false;
+     }
+     return $result;
+}
+  
+function is_future_date($date){
+    $today = date('Y-m-d'); // Get today's date in Y-m-d format
+    $datex = date('Y-m-d', strtotime($date)); // Convert input date string to Y-m-d format
+    if(!($datex > $today)){
+        $result=true; 
+    }else{
+        $result=false;
+    }
+    return $result; // Compare input date to today's date and return true if input date is in the future
+}
+
+
+function CreateReg($conn, $id_usuario, $numerop, $date, $time, $mensaje){
+    $sql = "INSERT INTO reservaciones (id_usuario, nropersonas, fecha, hora, mensaje) VALUES (?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../reservaciones.php?error=stmtfailed");
+    exit();
+    }
+    mysqli_stmt_bind_param($stmt, "iisss", $id_usuario, $numerop, $date, $time, $mensaje);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../reservaciones.php?error=none");
+    exit(); 
 }
