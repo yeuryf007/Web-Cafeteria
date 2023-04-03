@@ -94,12 +94,6 @@
                 <button id="extras">Extras</button>
             </nav>
             <div id="comidas-div">
-                <div class="comida">
-                    <h2></h2>
-                    <p></p>
-                    <p>Precio<br>$</p>
-                    <button class="order-button" id="">Agregar</button>
-                </div>
             </div>
         </div>
     </main>
@@ -152,32 +146,128 @@
                 ?>');
             });
             $('#platosfuertes').click(function(){
-                $('#entradasdiv').hide();
-                $('#platosfuertesdiv').show();
-                $('#postresdiv').hide();
-                $('#bebidasdiv').hide();
-                $('#extrasdiv').hide();
+                $('#comidas-div').html('<?php
+                    $serverName = "localhost";
+                    $dBUsername = "root";
+                    $dBPassword = "";
+                    $dBName = "ecommerce";
+                    
+                    $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+                    
+                    if (!$conn) {
+                        die("Conexion Fallo: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM `productos` WHERE `descripcion` = 'plato fuerte'";
+                    
+                    $result = mysqli_query($conn, $sql);
+                    
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id_producto = $row['id_producto'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        $descripcion = $row['descripcion'];
+                        $stock = $row['stock'];
+                        
+                        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+                    }
+                    
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                ?>');
             });
             $('#postres').click(function(){
-                $('#entradasdiv').hide();
-                $('#platosfuertesdiv').hide();
-                $('#postresdiv').show();
-                $('#bebidasdiv').hide();
-                $('#extrasdiv').hide();
+                $('#comidas-div').html('<?php
+                    $serverName = "localhost";
+                    $dBUsername = "root";
+                    $dBPassword = "";
+                    $dBName = "ecommerce";
+                    
+                    $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+                    
+                    if (!$conn) {
+                        die("Conexion Fallo: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM `productos` WHERE `descripcion` = 'postre'";
+                    
+                    $result = mysqli_query($conn, $sql);
+                    
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id_producto = $row['id_producto'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        $descripcion = $row['descripcion'];
+                        $stock = $row['stock'];
+                        
+                        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+                    }
+                    
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                ?>');
             });
             $('#bebidas').click(function(){
-                $('#entradasdiv').hide();
-                $('#platosfuertesdiv').hide();
-                $('#postresdiv').hide();
-                $('#bebidasdiv').show();
-                $('#extrasdiv').hide();
+                $('#comidas-div').html('<?php
+                    $serverName = "localhost";
+                    $dBUsername = "root";
+                    $dBPassword = "";
+                    $dBName = "ecommerce";
+                    
+                    $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+                    
+                    if (!$conn) {
+                        die("Conexion Fallo: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM `productos` WHERE `descripcion` = 'bebida'";
+                    
+                    $result = mysqli_query($conn, $sql);
+                    
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id_producto = $row['id_producto'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        $descripcion = $row['descripcion'];
+                        $stock = $row['stock'];
+                        
+                        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+                    }
+                    
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                ?>');
             });
             $('#extras').click(function(){
-                $('#entradasdiv').hide();
-                $('#platosfuertesdiv').hide();
-                $('#postresdiv').hide();
-                $('#bebidasdiv').hide();
-                $('#extrasdiv').show();
+                $('#comidas-div').html('<?php
+                    $serverName = "localhost";
+                    $dBUsername = "root";
+                    $dBPassword = "";
+                    $dBName = "ecommerce";
+                    
+                    $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+                    
+                    if (!$conn) {
+                        die("Conexion Fallo: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM `productos` WHERE `descripcion` = 'extra'";
+                    
+                    $result = mysqli_query($conn, $sql);
+                    
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id_producto = $row['id_producto'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        $descripcion = $row['descripcion'];
+                        $stock = $row['stock'];
+                        
+                        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+                    }
+                    
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                ?>');
             });
         });
     </script>
