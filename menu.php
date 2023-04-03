@@ -21,9 +21,10 @@
         <div class="titulo">
             <h1 id="titulo">Menú</h1>
         </div>
-        <button id="ordenar">Ordenar</button>
+        
     </header>
     <main>
+    <button id="ordenar">Ordenar</button>
 <!--Esto es el ordenar-->
         <div id="main2">
             <nav>

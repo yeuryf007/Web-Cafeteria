@@ -41,20 +41,20 @@ header{
 }
 
 #ordenar{
-    background-color: #FF8C42;
-    color: white;
-    box-sizing: border-box;
+    background: transparent;
     border: 1px solid #FF8C42;
+    color: #FF8C42;
     border-radius: 13px;
     font-size:  x-large;
     align-self: center;
     padding: 5px 15px 5px 15px;
-    margin: 0;
+    margin-top: 30px;
 }
 
 #ordenar:hover{
-    background: transparent;
-    color: #FF8C42;
+    background-color: #FF8C42;
+    color: white;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -72,6 +72,8 @@ main{
     background-size: cover;
     display: flex;
     justify-content: center;
+    place-items: center;
+    flex-direction: column;
 }
 
 #cuerpo{
