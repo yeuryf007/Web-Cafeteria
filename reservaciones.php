@@ -24,26 +24,34 @@
     <main>
         <div id="reserva">
             <h2>Reservación de mesa</h2>
-            <form action="" method="post">
+            <?php
+                if (isset($_SESSION["user"])) {
+                    echo "<h3> Introduzca sus datos de la reserva " . $_SESSION["user"]."</h3>";
+                    echo "<h3> Tiene el ID: " . $GLOBALS['ids']."</h3>";
+                    
+                }
+            ?>
+            <form action="/includes/reservas.inc.php" method="post">
                 <table class="div1">
                     <tr>
                         <td><i class="fa-solid fa-user-group iconores"></i></td>
-                        <td><div class="div1"><input type="number"  min="1" max="15" class="inputres" placeholder="Nro personas"></td>
+                        <input type="hidden"  name="id_usuario" value="$_SESSION['id_usuario']">
+                        <td><div class="div1"><input type="number"  min="1" max="15" class="inputres" placeholder="Nro personas" name="numerop"></td>
                     </tr>
                     <tr>
                         <td><i class="fa-solid fa-calendar-days iconores"></i></td>
-                        <td><input type="date" class="inputres" placeholder="Mañana"></td>
+                        <td><input type="date" class="inputres" placeholder="Mañana" name="date"></td>
                     </tr>
                     <tr>
                         <td><i class="fa-regular fa-clock iconores"></i></td>
-                        <td><input type="time" min="09:00" max="20:00" class="inputres"></td>
+                        <td><input type="time" min="09:00" max="20:00" class="inputres" name="time"></td>
                     </tr>
                     <tr>
                         <td><i class="fa-regular fa-message iconores"></i></td>
-                        <td><textarea style="resize:none; width:450px; margin-bottom: 10px; margin-top: 10px;"></textarea></td>
+                        <td><textarea style="resize:none; width:450px; margin-bottom: 10px; margin-top: 10px;" name="mensaje"></textarea></td>
                     </tr>
                 </table>
-                <button id="boton3">Reservar</button>
+                <button id="boton3" name="submit" type="submit">Reservar</button>
             </form>
         </div>
     </main>

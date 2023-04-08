@@ -59,8 +59,10 @@ header{
 }
 
 .formulario{
-    height: 650px;
-    width: 535px;
+    height: 900px;
+    width: 700px;
+    border-radius: 5px;
+    margin-top: 300px;
 }
 
 #divida{
