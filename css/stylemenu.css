@@ -41,20 +41,20 @@ header{
 }
 
 #ordenar{
-    background-color: #FF8C42;
-    color: white;
-    box-sizing: border-box;
+    background: transparent;
     border: 1px solid #FF8C42;
+    color: #FF8C42;
     border-radius: 13px;
     font-size:  x-large;
     align-self: center;
     padding: 5px 15px 5px 15px;
-    margin: 0;
+    margin-top: 30px;
 }
 
 #ordenar:hover{
-    background: transparent;
-    color: #FF8C42;
+    background-color: #FF8C42;
+    color: white;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -72,6 +72,8 @@ main{
     background-size: cover;
     display: flex;
     justify-content: center;
+    place-items: center;
+    flex-direction: column;
 }
 
 #cuerpo{
@@ -84,6 +86,7 @@ main{
 
 #main2{
     padding: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -105,14 +108,6 @@ main{
 }
 
 #comidas-div{
-    place-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#entradasdiv, #platosfuertesdiv, #postresdiv, #bebidasdiv, #extrasdiv{
     width: 1200px;
 }
 
@@ -145,7 +140,7 @@ main{
     text-align: center;
 }
 
-.comida button{
+.order-button{
     border-radius: 13px;
     background-color: #FF8C42;
     font-size:  large;
@@ -156,7 +151,7 @@ main{
     margin-top: 10px;
 }
 
-.comida button:hover{
+.order-button:hover{
     cursor: pointer;
     background-color: white;
     border: 1px solid #FF8C42;

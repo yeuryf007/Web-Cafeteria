@@ -19,11 +19,13 @@
         ?>
     
         <div class="titulo">
-            <h1>Menú</h1>
+            <h1 id="titulo">Menú</h1>
         </div>
-        <button id="ordenar">Ordenar</button>
+        
     </header>
     <main>
+    <button id="ordenar">Ordenar</button>
+    <!--Este es el menú-->
         <div id="cuerpo">
             <div class="table">
                 <div class="menus">
@@ -71,7 +73,6 @@
                             <li>Jugo de uva</li>
                         </ul>
             </div>
-                
                 <div class="menus">
                 <img src="imagenes/crema.png">
                     <h2>Extras</h2>
@@ -81,16 +82,65 @@
                         <li>Plátano frito</li>
                     </ul>
                 </div>
-
-                
+            </div>
+        </div>
+    <!--Esto es el ordenar-->
+        <div id="main2">
+            <nav>
+                <button class="nav-button" id="entrada">Entradas</button>
+                <button class="nav-button" id="plato fuerte">Platos fuertes</button>
+                <button class="nav-button" id="postre">Postres</button>
+                <button class="nav-button" id="bebida">Bebidas</button>
+                <button class="nav-button" id="extra">Extras</button>
+            </nav>
+            <div id="comidas-div">
             </div>
         </div>
     </main>
     <script>
         $(document).ready(function(){
+            $('#main2').hide();
             $('#ordenar').click(function(){
-                $('.table').hide();
-                $('main').load('ordenar.php');
+                if($('#ordenar').text() == 'Ordenar'){
+                    $('#ordenar').text('Menú');
+                    $('#titulo').text('Ordenar');
+                    $('#cuerpo').hide();
+                    $('#main2').show();
+                }
+                else{
+                    $('#ordenar').text('Ordenar');
+                    $('#titulo').text('Menú');
+                    $('#main2').hide();
+                    $('#cuerpo').show();
+                }
+            });
+            /* ajax para imprimir menu de ordenes */
+            $('.nav-button').click(function(){
+                var clickedbuttonid = $(this).attr('id');
+                console.log($(this).attr('id'));
+                $.ajax({
+                    url: "includes/printmenu.php",
+                    type: "POST",
+                    data: { id1: clickedbuttonid},
+                    success: function (result) {
+                        $('#comidas-div').html(result);
+                    }
+                });
+            });
+            /* ajax para ingresar datos a carrito del cliente */
+            $("#comidas-div").on("click", ".order-button", function(e){
+                var id = $(this).attr("id");
+                var cantidad = 1;
+                e.preventDefault();
+
+                $.ajax({
+                    url: "includes/agregar.php",
+                    method: "POST",
+                    data: {id: id, cantidad: cantidad},
+                    success: function(data){
+                        alert("Producto agregado al carrito");
+                    }
+                });
             });
         });
     </script>

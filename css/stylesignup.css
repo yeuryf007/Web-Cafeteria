@@ -1,6 +1,7 @@
 html{
     width: 100%;
 }
+
 header{
     background-image: url("../imagenes/bagraun.png");
     background-color: #1e1e1e;
@@ -48,36 +49,37 @@ header{
     color: #FF8C42;
 }
 
-
 .titulo>h1{
     font-size: 120px;
     color: #FF8C42;
     font-family: "Dancing Script";
-    margin-bottom: 0;
+    margin: 100px 0 10px 0;
     line-height: 115px;
     font-weight: 400;
 }
+
 .formulario{
     height: 900px;
     width: 700px;
     border-radius: 5px;
     margin-top: 300px;
 }
+
 #divida{
-    margin-top: 30px;
-    margin-left: 30px;
+    margin: 30px;
+    height: 570px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
+    padding: 0;
 }
-.textbox input {
+
+.textbox input{
     text-align: left;
     border: none;
     outline: none;
     background: none;
-    color: #2cd1fa;
     font-size: 18px;
     width: 67%;
     float: left;
@@ -87,9 +89,10 @@ header{
 }
 
 main{
-  background-color: #F5EEE6;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #F5EEE6;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
 }
