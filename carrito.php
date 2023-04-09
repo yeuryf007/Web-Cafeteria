@@ -29,30 +29,29 @@
     </header>
     <main>
         <div id="centro">
-            <div class="ordenes" id="nomped">
-                <p class="titulis">Nombre</p>
-                
-            </div>
-            <div class="ordenes" id="presio">
-                <p class="titulis">Precio</p>
-
-            </div>
-            <div class="ordenes" id="cantidad">
-                <p class="titulis">Cantidad</p>
-                <input type="number" min="1" max="20">
-            </div>
-            <div class="ordenes" id="subto">
-                <p class="titulis">Subtotal</p>
-                
+            <div class="ordenes">
+                <div id="nomped">
+                    <p class="titulis">Nombre del producto</p>
+                    <p>Precio del producto</p>
+                    <p id="precio"></p>
+                    <button style="width: 100px;" name="eliminar" id="boton3">Eliminar</button>
+                </div>
+                <div class="number">
+                    <span class="minus">-</span>
+                    <input type="number" value="1" id="num">
+                    <span class="plus">+</span>
+                </div>
             </div>
         </div>
         <div id="derecha">
-            <p class="titulis">Totales</p>
-            <p class="titulis">Totales</p>
             <p class="titulis">Subtotal</p>
-            <p class="titulis">Totales</p>
+            <p class="resultis" id="subtotal">Num subtotal</p> 
+            <p class="titulis">Total</p>
+            <p class="resultis" id="total">Num total</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
             <p class="titulis">Código de Promoción</p>
-            <input type="text">
+            <input type="text" placeholder="INSERTE CODIGO" style="width: 300px; margin-bottom:5px;">
+            <button id="boton3">Aplicar</button>
+            <button id="checkout">Checkout</button>
         </div>
     </main>
     <script>
@@ -67,6 +66,22 @@
                 }
             });
         });
+        	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
     </script>
 </body>
     <?php

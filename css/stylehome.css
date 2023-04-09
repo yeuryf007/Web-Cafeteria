@@ -72,6 +72,18 @@ main{
     z-index: 1;
 }
 
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
+
 main #mostrador{
     margin-top: -50px;
     position: absolute;
