@@ -31,7 +31,6 @@
             <?php
                 if (isset($_SESSION["user"])||isset($_SESSION["id"])) {
                     echo "<h3> Introduzca sus datos de la reserva " . $_SESSION["user"]."</h3>";
-                    echo "<h3> Tiene el ID: " . $_SESSION["id"]."</h3>";
                     
                 }
             ?>
