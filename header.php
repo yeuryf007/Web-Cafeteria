@@ -1,5 +1,5 @@
 
-        <div class="topbar">
+<div class="topbar">
             <div class="logo">Logo Empresa</div>
             <nav class="nav" id="navgen">
             <a href="index.php"><button class="boton1">Home</button></a>
