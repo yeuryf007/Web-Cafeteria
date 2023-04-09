@@ -5,16 +5,32 @@
 }
 #derecha{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 25%;
+    color: #1e1e1e;
+    padding: 10px;
 }
 main{
     background-color: #F5EEE6;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    place-items: center;
     flex-direction: row;
+    font-family: 'Quicksand';
+}
+
+.ordenes{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    color: #1e1e1e;
+    border: 1px solid #1e1e1e7b;
+    height: fit-content;
+}
+
+.titulis{
+    font-family: 'Dancing Script';
+    font-size: 24px;
+    border-bottom: 1px solid #1e1e1e7b;
 }
 html{
     width: 100%;

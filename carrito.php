@@ -26,21 +26,29 @@
     <main>
         <div id="centro">
             <div class="ordenes" id="nomped">
-                Nombre
-            </div>
-            <div class="ordenes" id="presio">
+                <p class="titulis">Nombre</p>
                 
             </div>
+            <div class="ordenes" id="presio">
+                <p class="titulis">Precio</p>
+
+            </div>
             <div class="ordenes" id="cantidad">
-                <input type="number">
+                <p class="titulis">Cantidad</p>
+                <input type="number" min="1" max="20">
             </div>
             <div class="ordenes" id="subto">
+                <p class="titulis">Subtotal</p>
                 
             </div>
         </div>
         <div id="derecha">
-            Totales
-            <p>Subtotal</p>
+            <p class="titulis">Totales</p>
+            <p class="titulis">Totales</p>
+            <p class="titulis">Subtotal</p>
+            <p class="titulis">Totales</p>
+            <p class="titulis">Código de Promoción</p>
+            <input type="text"
         </div>
     </main>
 </body>
