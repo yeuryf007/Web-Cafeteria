@@ -49,13 +49,7 @@
             <div class="userinfo" id="reserv">
                 <h1>Reservaciones</h1>
 
-                <table id="tabla2">
-                    <tr>
-                        <th>Día</th>
-                        <th>Núm. personas</th>
-                        <th>Hora</th>
-                        <th>Comentarios especiales</th>
-                    </tr>
+                
                     <?php
             require_once 'includes/dbh.inc.php';
             include_once 'includes/sesion.php';
@@ -63,6 +57,13 @@
                     $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
+                        echo "<table id='tabla2'>
+                    <tr>
+                        <th>Día</th>
+                        <th>Núm. personas</th>
+                        <th>Hora</th>
+                        <th>Comentarios especiales</th>
+                    </tr>";
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
                             echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
