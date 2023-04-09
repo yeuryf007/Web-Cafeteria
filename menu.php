@@ -130,13 +130,12 @@
             /* ajax para ingresar datos a carrito del cliente */
             $("#comidas-div").on("click", ".order-button", function(e){
                 var id = $(this).attr("id");
-                var cantidad = 1;
                 e.preventDefault();
 
                 $.ajax({
                     url: "includes/agregar.php",
                     method: "POST",
-                    data: {id: id, cantidad: cantidad},
+                    data: {id: id},
                     success: function(data){
                         alert("Producto agregado al carrito");
                     }
