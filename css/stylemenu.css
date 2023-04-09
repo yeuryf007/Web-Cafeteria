@@ -21,6 +21,7 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
+    justify-content: space-between;
 }
 
 .a-button{
@@ -92,6 +93,18 @@ main{
     place-items: center;
 }
 
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
+
 #main2 nav button{
     background-color: #F5EEE6;
     border-radius: 13px;
@@ -101,6 +114,18 @@ main{
     padding: 10px;
     border: 0;
 }
+
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
 
 #main2 nav button:hover{
     cursor: pointer;
@@ -235,8 +260,7 @@ ul{
 
 #navgen{
     font-size: x-large;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: 10px;
 }
 
 footer{

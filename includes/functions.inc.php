@@ -102,7 +102,7 @@ function loginUser($conn, $name, $password){
     else{
         session_start();
         $_SESSION["user"]= $uidExists["nombre"];
-        $GLOBALS['ids']= $uidExists["id_usuario"];
+        $_SESSION['id']= $uidExists["id_usuario"];
         header("location: ../index.php");
         exit();
     }
@@ -128,6 +128,32 @@ function is_future_date($date){
     return $result; // Compare input date to today's date and return true if input date is in the future
 }
 
+function invalidTime($time){
+    $valid = true;
+    $format = 'H:i';
+    $min_time = '8:00';
+    $max_time = '22:00';
+    
+    $time = DateTime::createFromFormat($format, $time);
+    $min_time = DateTime::createFromFormat($format, $min_time);
+    $max_time = DateTime::createFromFormat($format, $max_time);
+
+    if($time < $min_time || $time > $max_time){
+        $result=true;
+    }else{
+        $result=false;
+    }
+    return $result;
+}
+
+function invalidPeople($numerop){
+    if($numerop<1 || $numerop>15){
+        $result=true; 
+    }else{
+        $result=false;
+    }
+    return $result;
+}
 
 function CreateReg($conn, $id_usuario, $numerop, $date, $time, $mensaje){
     $sql = "INSERT INTO reservaciones (id_usuario, nropersonas, fecha, hora, mensaje) VALUES (?, ?, ?, ?, ?);";
@@ -139,6 +165,4 @@ function CreateReg($conn, $id_usuario, $numerop, $date, $time, $mensaje){
     mysqli_stmt_bind_param($stmt, "iisss", $id_usuario, $numerop, $date, $time, $mensaje);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../reservaciones.php?error=none");
-    exit(); 
 }

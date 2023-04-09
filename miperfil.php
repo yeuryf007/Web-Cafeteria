@@ -1,3 +1,7 @@
+<?php
+        include_once 'includes/sesion.php';
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Mi perfil</title>
 </head>
 <body>
     <header>
@@ -44,6 +48,7 @@
             </div>
             <div class="userinfo" id="reserv">
                 <h1>Reservaciones</h1>
+
                 <table id="tabla2">
                     <tr>
                         <th>Día</th>
@@ -51,36 +56,23 @@
                         <th>Hora</th>
                         <th>Comentarios especiales</th>
                     </tr>
-                    <tr>
-                        <td>03/02/2023</td>
-                        <td>4</td>
-                        <td>8:00 pm</td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td>20/02/2023</td>
-                        <td>2</td>
-                        <td>6:00 pm</td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td>07/03/2023</td>
-                        <td>2</td>
-                        <td>1:00 pm</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>23/03/2023</td>
-                        <td>6</td>
-                        <td>9:00 pm</td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td>02/04/2023</td>
-                        <td>2</td>
-                        <td>7:00 pm</td>
-                        <td> - </td>
-                    </tr>
+                    <?php
+            require_once 'includes/dbh.inc.php';
+            include_once 'includes/sesion.php';
+            $a = $_SESSION["id"];
+                    $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
+                    $result = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
+                            echo "</tr>";
+                            }
+                        } else {
+                        echo "No hay reservas!";
+                        }
+            ?>
+                    
                 </table>
             </div>
             

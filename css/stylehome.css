@@ -23,6 +23,7 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
+    justify-content: space-between;
 }
 
 .a-button{
@@ -70,6 +71,18 @@ main{
     height: 700px;
     z-index: 1;
 }
+
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
 
 main #mostrador{
     margin-top: -50px;
@@ -136,11 +149,11 @@ main p{
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: white;
-    margin-left: 5px;
+    margin: 0;
     font-size:  large;
     font-family: 'Quicksand';
-    margin: 0;
 }
+
 .boton2:hover{
     background-color: #FF8C42;
     cursor: pointer;
@@ -168,10 +181,8 @@ main p{
 
 #navgen{
     font-size: x-large;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: 10px;
 }
-
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");

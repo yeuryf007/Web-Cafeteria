@@ -2,7 +2,7 @@
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
     
-    $a =isset($_POST['id1'])?$_POST['id1']:'not yet';
+    $a =isset($_POST['tipo'])?$_POST['tipo']:'not yet';
 
     $sql = "SELECT * FROM `productos` WHERE `descripcion` = '$a'";
     

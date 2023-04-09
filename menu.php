@@ -1,3 +1,7 @@
+<?php
+        include_once 'includes/sesion.php';
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,13 @@
         
     </header>
     <main>
-    <button id="ordenar">Ordenar</button>
+        <?php
+        if (isset($_SESSION["user"])) {
+            echo "<button id='ordenar'>Ordenar</button>";
+        }
+        
+        ?>
+    
     <!--Este es el menú-->
         <div id="cuerpo">
             <div class="table">
@@ -117,11 +127,10 @@
             /* ajax para imprimir menu de ordenes */
             $('.nav-button').click(function(){
                 var clickedbuttonid = $(this).attr('id');
-                console.log($(this).attr('id'));
                 $.ajax({
                     url: "includes/printmenu.php",
                     type: "POST",
-                    data: { id1: clickedbuttonid},
+                    data: {tipo: clickedbuttonid},
                     success: function (result) {
                         $('#comidas-div').html(result);
                     }
@@ -129,15 +138,18 @@
             });
             /* ajax para ingresar datos a carrito del cliente */
             $("#comidas-div").on("click", ".order-button", function(e){
-                var id = $(this).attr("id");
+                var idProducto = $(this).attr("id");
+
                 e.preventDefault();
 
                 $.ajax({
-                    url: "includes/agregar.php",
+                    url: "includes/agregarAcarrito.php",
                     method: "POST",
-                    data: {id: id},
+                    data: {idP: idProducto},
                     success: function(data){
                         alert("Producto agregado al carrito");
+                    },error: function(data){
+                        alert("Error al agregar al carrito");
                     }
                 });
             });
