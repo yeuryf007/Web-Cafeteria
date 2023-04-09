@@ -6,6 +6,7 @@ $dBPassword = "";
 $dBName = "ecommerce";
 
 
+
 $conn = mysqli_connect($serverName, $dBUsername,$dBPassword, $dBName);
 
 if(!$conn){
