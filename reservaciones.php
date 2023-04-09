@@ -33,6 +33,7 @@
                     echo "<h3> Introduzca sus datos de la reserva " . $_SESSION["user"]."</h3>";
                     
                 }
+                
             ?>
             <form action="/includes/reservas.inc.php" method="post">
                 <table class="div1">
