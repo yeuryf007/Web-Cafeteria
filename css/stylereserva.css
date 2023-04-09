@@ -21,6 +21,7 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
+    justify-content: space-between;
 }
 
 .a-button{
@@ -155,11 +156,10 @@ input::-webkit-inner-spin-button {
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: white;
-    margin-left: 5px;
     font-size:  large;
     font-family: 'Quicksand';
-    margin: 0;
 }
+
 .boton2:hover{
     background-color: #FF8C42;
     cursor: pointer;
@@ -183,10 +183,8 @@ input::-webkit-inner-spin-button {
 
 #navgen{
     font-size: x-large;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: 10px;
 }
-
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");

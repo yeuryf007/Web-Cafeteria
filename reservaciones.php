@@ -1,7 +1,3 @@
-<?php
-        include_once '/xampp/htdocs/cafe/Web-Cafeteria-1/includes/sesion.php';
-        ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +25,9 @@
         <div id="reserva">
             <h2>Reservación de mesa</h2>
             <?php
-                if (isset($_SESSION["user"])||isset($_SESSION["id"])) {
+                if (isset($_SESSION["user"])) {
                     echo "<h3> Introduzca sus datos de la reserva " . $_SESSION["user"]."</h3>";
+                    echo "<h3> Tiene el ID: " . $GLOBALS['ids']."</h3>";
                     
                 }
             ?>
@@ -38,7 +35,7 @@
                 <table class="div1">
                     <tr>
                         <td><i class="fa-solid fa-user-group iconores"></i></td>
-                        <input type="hidden"  name="id_usuario" value=<?php echo $_SESSION['id'] ?>>
+                        <input type="hidden"  name="id_usuario" value="$_SESSION['id_usuario']">
                         <td><div class="div1"><input type="number"  min="1" max="15" class="inputres" placeholder="Nro personas" name="numerop"></td>
                     </tr>
                     <tr>
