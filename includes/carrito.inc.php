@@ -2,10 +2,11 @@
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
     
-    $a ="extra";
+    $a = $_SESSION['id'];
 
-    $sql = "SELECT * FROM `productos` WHERE `descripcion` = '$a'";
+    $sql = "SELECT * FROM `orden_carrito` WHERE `id_usuario` = '$a'";
     
+    echo $sql;
     $result = mysqli_query($conn, $sql);
     
     while ($row = mysqli_fetch_assoc($result)) {
