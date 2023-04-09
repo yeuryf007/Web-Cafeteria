@@ -54,8 +54,18 @@
             <button id="checkout">Checkout</button>
         </div>
     </main>
-
     <script>
+        $(document).ready(function(){
+            /* ajax para imprimir ordenes de carrito */
+            var clickedbuttonid = $(this).attr('id');
+            console.log($(this).attr('id'));
+            $.ajax({
+                url: "includes/carrito.inc.php",
+                success: function (result) {
+                    $('#centro').html(result);
+                }
+            });
+        });
         	$(document).ready(function() {
 			$('.minus').click(function () {
 				var $input = $(this).parent().find('input');

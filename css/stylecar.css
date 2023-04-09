@@ -164,6 +164,7 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
+    justify-content: space-between;
 }
 
 .titulo{
@@ -221,8 +222,7 @@ body{
 
 #navgen{
     font-size: x-large;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: 10px;
 }
 
 footer{
