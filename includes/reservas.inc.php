@@ -10,6 +10,12 @@
 
     $result = "Se ha realizado la reserva";
 
+    if (emptyInputReserva($numerop, $date, $time) !==false){ 
+        $result = "Faltaron campos por llenar";
+        echo $result;
+        exit();
+    }
+    
     if (invalidPeople($numerop) !==false){ 
         $result = "El número de personas debe ser mayor a 0 y menor a 15";
         echo $result;
@@ -22,12 +28,6 @@
         exit();
     }
 
-    if (emptyInputReserva($numerop, $date, $time) !==false){ 
-        $result = "Faltaron campos por llenar";
-        echo $result;
-        exit();
-    }
-    
     if (is_future_date($date) !==false){ 
         $result = "La fecha debe ser posterior a la actual";
         echo $result;
