@@ -1,5 +1,5 @@
 <?php
-        include_once '/xampp/htdocs/cafe/Web-Cafeteria-1/includes/sesion.php';
+        include_once 'includes/sesion.php';
         ?>
 
 <!DOCTYPE html>
