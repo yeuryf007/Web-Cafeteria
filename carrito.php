@@ -36,6 +36,7 @@
                     <p id="precio"></p>
                     <button style="width: 100px;" name="eliminar" id="boton3">Eliminar</button>
                 </div>
+            
                 <div class="number">
                     <span class="minus">-</span>
                     <input type="number" value="1" id="num">
@@ -49,12 +50,13 @@
             <p class="titulis">Total</p>
             <p class="resultis" id="total">Num total</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
             <p class="titulis">Código de Promoción</p>
-            <input type="text" placeholder="INSERTE CODIGO" style="width: 300px; margin-bottom:5px;">
+            <div class="textbox"><input type="text" placeholder="INSERTE CODIGO" style="width: 200px; margin-bottom:10px;"></div>
+            
             <button id="boton3">Aplicar</button>
             <button id="checkout">Checkout</button>
         </div>
     </main>
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             /* ajax para imprimir ordenes de carrito */
             var clickedbuttonid = $(this).attr('id');
@@ -82,7 +84,7 @@
 				return false;
 			});
 		});
-    </script>
+    </script> -->
 </body>
     <?php
     include_once 'footer.php';
