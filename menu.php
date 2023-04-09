@@ -138,15 +138,17 @@
             });
             /* ajax para ingresar datos a carrito del cliente */
             $("#comidas-div").on("click", ".order-button", function(e){
-                var id = $(this).attr("id");
+                var idProducto = $(this).attr("id");
                 e.preventDefault();
 
                 $.ajax({
-                    url: "includes/agregar.php",
+                    url: "includes/agregarAcarrito.php",
                     method: "POST",
-                    data: {id: id},
+                    data: {idP: idProducto},
                     success: function(data){
                         alert("Producto agregado al carrito");
+                    },error: function(data){
+                        alert("Error al agregar al carrito");
                     }
                 });
             });
