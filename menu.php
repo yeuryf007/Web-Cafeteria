@@ -127,11 +127,10 @@
             /* ajax para imprimir menu de ordenes */
             $('.nav-button').click(function(){
                 var clickedbuttonid = $(this).attr('id');
-                console.log($(this).attr('id'));
                 $.ajax({
                     url: "includes/printmenu.php",
                     type: "POST",
-                    data: { id1: clickedbuttonid},
+                    data: {tipo: clickedbuttonid},
                     success: function (result) {
                         $('#comidas-div').html(result);
                     }

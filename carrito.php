@@ -52,9 +52,22 @@
             <p class="titulis">Subtotal</p>
             <p class="titulis">Totales</p>
             <p class="titulis">Código de Promoción</p>
-            <input type="text"
+            <input type="text">
         </div>
     </main>
+    <script>
+        $(document).ready(function(){
+            /* ajax para imprimir ordenes de carrito */
+            var clickedbuttonid = $(this).attr('id');
+            console.log($(this).attr('id'));
+            $.ajax({
+                url: "includes/carrito.inc.php",
+                success: function (result) {
+                    $('#centro').html(result);
+                }
+            });
+        });
+    </script>
 </body>
     <?php
     include_once 'footer.php';
