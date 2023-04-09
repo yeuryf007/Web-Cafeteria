@@ -1,0 +1,251 @@
+html{
+    width: 100%;
+}
+
+header{
+    background-image: url("../imagenes/bagraun.png");
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
+
+.topbar{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    background-color: #342928ae;
+    z-index: 999;
+    justify-content: space-between;
+}
+
+.a-button{
+    display: inline-block;
+    border-radius: 13px;
+}
+
+.titulo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: auto;
+}
+
+.titulo h1{
+    font-size: 100px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: -20px;
+    font-weight: 400;
+}
+
+
+body{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main{
+    background-color: #F5EEE6;
+    background-size: cover;
+    overflow: hidden;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reserva{
+    background-color: white;
+    align-self: center;
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 1%;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+#reserva h2{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-style: normal;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1{
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1 tr td{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.inputres{
+    height: 40px;
+    width: 450px;
+    font-size: x-large;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.iconores{
+    font-size: 35px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#reserva textarea{
+    margin-bottom: 25px;
+    height: 80px;
+    width: 100%;
+    font-size: large;
+}
+
+.boton1{
+    border: 0;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    font-family: 'Quicksand';
+}
+
+.boton1:hover{
+    text-decoration: underline;
+}
+
+.boton2{
+    box-sizing: border-box;
+    width: 189px;
+    height: 45px;
+    background: rgba(255, 140, 66, 0.24);
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: white;
+    font-size:  large;
+    font-family: 'Quicksand';
+}
+
+.boton2:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+}
+
+#boton3{
+    border-radius: 13px;
+    background-color: #FF8C42;
+    font-size:  large;
+    font-family: 'Quicksand';
+    height: 40px;
+    width: 100px;
+    border: 0;
+}
+
+#boton3:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #FF8C42;
+}
+
+#navgen{
+    font-size: x-large;
+    margin-right: 10px;
+}
+
+footer{
+    background-image: url("../imagenes/cafeteriafooter.png");
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: center;
+    padding-top: 70px;
+    font-family: 'Quicksand';
+}
+
+footer div:last-child{
+    margin-right: 0;
+}
+
+footer div{
+    margin-right: 10%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer div a{
+    color: #ffffff;
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+footer div:nth-child(2) a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.redes{
+    font-size: xx-large;
+    margin-left: 5px;
+}
+
+footer div:first-child{
+    margin-top: -10px;
+}
+h3{
+    color: #ff8c42;
+}

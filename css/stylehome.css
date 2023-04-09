@@ -4,6 +4,7 @@ html{
 
 header{
     background-image: url("../imagenes/bagraun.png");
+    background-color: #1e1e1e;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -22,6 +23,7 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
+    justify-content: space-between;
 }
 
 .a-button{
@@ -36,7 +38,6 @@ header{
     margin-top: auto;
     margin-left: 8%;
     width: 50%;
-    
 }
 
 .titulo>h1{
@@ -56,14 +57,6 @@ header{
     color: #ffffff;
 }
 
-.bg-image {
-    opacity: 0.25;
-    position: absolute;
-    pointer-events: none;
-    width: 100%;
-    top: -50px;
-}
-
 body{
     background-color: black;
     width: 100%;
@@ -79,6 +72,18 @@ main{
     height: 700px;
     z-index: 1;
 }
+
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
 
 main #mostrador{
     margin-top: -50px;
@@ -113,11 +118,13 @@ main h2{
     font-family: "Dancing Script";
     font-size: 50px;
     margin: 0;
+    font-weight: 400;
 }
 
 main p{
     margin-top: 0;
-    font-size: large;
+    font-size: 16px;
+    font-family: "Quicksand";
 }
 
 .boton1{
@@ -143,11 +150,11 @@ main p{
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: white;
-    margin-left: 5px;
+    margin: 0;
     font-size:  large;
     font-family: 'Quicksand';
-    margin: 0;
 }
+
 .boton2:hover{
     background-color: #FF8C42;
     cursor: pointer;
@@ -175,10 +182,8 @@ main p{
 
 #navgen{
     font-size: x-large;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: 10px;
 }
-
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");
@@ -186,15 +191,51 @@ footer{
     background-size: cover;
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 300px;
+    justify-content: center;
+    padding-top: 70px;
+    font-family: 'Quicksand';
+}
+
+footer div:last-child{
+    margin-right: 0;
 }
 
 footer div{
-    margin-right: 3%;
+    margin-right: 10%;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-footer nav{
+footer div a{
+    color: #ffffff;
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer div:nth-child(2){
     display: flex;
     flex-direction: column;
-    margin-right: 3%;
+}
+
+footer div:nth-child(2) a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.redes{
+    font-size: xx-large;
+    margin-left: 5px;
+}
+
+footer div:first-child{
+    margin-top: -10px;
+}
+
+#usunom{
+    font-size: 54px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
 }

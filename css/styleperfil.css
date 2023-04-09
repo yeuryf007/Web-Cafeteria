@@ -1,0 +1,322 @@
+html{
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-image: url("../imagenes/bagraun.png");
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.topbar{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    background-color: #342928ae;
+    z-index: 999;
+    justify-content: space-between;
+}
+
+.a-button{
+    display: inline-block;
+    border-radius: 13px;
+}
+
+.titulo{
+    margin-bottom: 75px;
+    margin-top: auto;
+    margin-left: 57px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#nomuser h1{
+    font-size: 120px;
+    color: #FF8C42;
+    font-family: "Dancing Script";
+    margin-bottom: 0;
+    line-height: 115px;
+    font-weight: 400;
+    margin-left: 70px;
+}
+
+#fotoperf img{
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+body{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main{
+    background-color: #F5EEE6;
+    color: black;
+    height: fit-content;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#izq{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+    margin-right: 30px;
+    border-right: 1px solid #c2c2c2;
+}
+
+
+body::-webkit-scrollbar {
+    width: 9px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #F5EEE6;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a15628;    /* color of the scroll thumb */
+  }
+  
+#centro{
+    width: 70%;
+    align-items: center;
+    float: right;
+}
+
+.fotose{
+    max-width: 400px;
+    max-height: 400px;
+    transition: transform .5s ease-in-out;
+    overflow: hidden;
+    border-radius: 9px;
+    margin-bottom: 1.5%;
+    margin-right: 1.5%;
+}
+
+.fotose:hover{
+    transform: scale(1.1);
+}
+
+.fotosehide{
+    opacity: 0;
+}
+
+#infgen{
+    font-size: large;
+    font-family: 'Quicksand';
+    width: 80%;
+    text-justify: distribute;
+}
+
+#fotos{
+    transition: 0.2s all linear;
+    margin-bottom: 2%;
+}
+.userinfo h1{
+    font-family: 'Dancing Script';
+    font-size: 35px;
+    align-items: center;
+}
+
+#boton3{
+    width: 70%;
+    height: 50px;
+    border: 1px solid #333;
+    font-family: 'Quicksand';
+    font-size: large;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 0.75s;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F5EEE6;
+}
+
+#boton3::before, #boton3::after {
+    position: absolute;
+    background: #F5EEE6;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  
+  #boton3::before {
+    height: 50px;
+    width: 130px;
+  }
+  
+  #boton3::after {
+    width: 150px;
+    height: 30px;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+  
+  #boton3:hover::before {
+    width: 0px;
+    background: #fff;
+  }
+  
+  #boton3:hover::after {
+    height: 0px;
+    background: #fff;
+  }
+  
+  #boton3:hover {
+    background: #fff;
+  }
+
+#tabla2{
+    width:80%; 
+    text-align: center; 
+    border-radius: 9px;
+    border: 1px solid #c2c2c2;
+    font-size: large;
+    align-self: center;
+    font-family: 'Quicksand';
+}
+.boton1{
+    border: 0;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    font-family: 'Quicksand';
+}
+
+.boton1:hover{
+    text-decoration: underline;
+}
+
+.boton2{
+    box-sizing: border-box;
+    width: 189px;
+    height: 45px;
+    background: rgba(255, 140, 66, 0.24);
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: white;
+    margin-left: 5px;
+    font-size:  large;
+    font-family: 'Quicksand';
+    margin: 0;
+}
+
+.boton2:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+}
+
+.boton3{
+    box-sizing: border-box;
+    width: 300px;
+    height: 59px;
+    background: transparent;
+    border: 1px solid #FF8C42;
+    border-radius: 13px;
+    color: #FF8C42;
+    font-size:  x-large;
+    align-self: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.boton3:hover{
+    background-color: #FF8C42;
+    cursor: pointer;
+    color: white;
+}
+
+#navgen{
+    font-size: x-large;
+    margin-right: 10px;
+}
+
+footer{
+    background-image: url("../imagenes/cafeteriafooter.png");
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: center;
+    padding-top: 70px;
+    font-family: 'Quicksand';
+}
+
+footer div:last-child{
+    margin-right: 0;
+}
+
+footer div{
+    margin-right: 10%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer div a{
+    color: #ffffff;
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+footer div:nth-child(2) a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.redes{
+    font-size: xx-large;
+    margin-left: 5px;
+}
+
+footer div:first-child{
+    margin-top: -10px;
+}
+
+#usunom{
+    font-size: 54px;
+    color: #42d3ff;
+    font-family: "Dancing Script";
+}
