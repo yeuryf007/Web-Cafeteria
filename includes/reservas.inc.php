@@ -11,6 +11,7 @@ if (isset($_POST["submit"])) {
 
     if (emptyInputReserva($numerop, $date, $time) !==false){ 
         header("location: ../reservaciones.php?error=emptyinput");
+
         exit();
     }
     

@@ -34,7 +34,21 @@
                     
                 }
                 
-            ?>
+      if(isset($_GET["error"])){
+        if($_GET["error"]=="emptyinput"){
+            echo "<p> Llena todos los campos :P </p>";
+        }
+        else if($_GET["error"]=="pastdate"){
+            echo "<p> Escribe una fecha valida :P </p>";
+        }
+        else if($_GET["error"]=="none"){
+            echo "<p> Se ha agregado correctamente la reserva :P </p>";
+        }
+        
+
+      }
+      
+      ?>    
             <form action="/includes/reservas.inc.php" method="post">
                 <table class="div1">
                     <tr>
