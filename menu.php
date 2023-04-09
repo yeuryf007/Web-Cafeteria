@@ -28,7 +28,13 @@
         
     </header>
     <main>
-    <button id="ordenar">Ordenar</button>
+        <?php
+        if (isset($_SESSION["user"])) {
+            echo "<button id='ordenar'>Ordenar</button>";
+        }
+        
+        ?>
+    
     <!--Este es el menú-->
         <div id="cuerpo">
             <div class="table">
