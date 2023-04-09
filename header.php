@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
         <div class="topbar">
             <div class="logo">Logo Empresa</div>
