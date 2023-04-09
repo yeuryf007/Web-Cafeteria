@@ -66,7 +66,6 @@
                 }
             });
         });
-        	$(document).ready(function() {
 			$('.minus').click(function () {
 				var $input = $(this).parent().find('input');
 				var count = parseInt($input.val()) - 1;
@@ -81,7 +80,6 @@
 				$input.change();
 				return false;
 			});
-		});
     </script>
 </body>
     <?php

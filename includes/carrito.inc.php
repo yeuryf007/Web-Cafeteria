@@ -1,10 +1,11 @@
 <?php
+    session_start();
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
-    
-    $a ="extra";
 
-    $sql = "SELECT * FROM `productos` WHERE `descripcion` = '$a'";
+    $usuario = $_SESSION['id'];
+
+    $sql = "SELECT * FROM `orden_carrito`, `productos` WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = `productos`.`id_producto`";
     
     $result = mysqli_query($conn, $sql);
     
@@ -13,9 +14,24 @@
         $nombre = $row['nombre'];
         $precio = $row['precio'];
         $descripcion = $row['descripcion'];
-        $stock = $row['stock'];
+        $cantidad = $row['cantidad'];
         
-        echo '<div class="comida"><h2>', $nombre, '</h2><p>', $nombre, '</p><p>Precio<br>$', $precio, '</p><button class="order-button" id="', $id_producto, '">Agregar</button></div>';
+        echo '<div class="ordenes">
+                    <div id="nomped">
+                        <p class="titulis">', $nombre,'</p>
+                        <p>Precio del producto</p>
+                        <p id="precio">', $precio,'</p>
+                        
+                    </div>
+                    <div class="num-y-elim">
+                        <div class="number">
+                            <span class="minus">-</span>
+                            <input type="number" value="', $cantidad,'" id="num">
+                            <span class="plus">+</span>
+                        </div>
+                        <button style="width: 100px;" name="eliminar" id="boton3">Eliminar</button>
+                    </div>
+                </div>';
     }
     
     mysqli_free_result($result);
