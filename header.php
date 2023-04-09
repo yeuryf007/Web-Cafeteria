@@ -12,6 +12,7 @@ session_start();
             if (isset($_SESSION["user"])) {
                 echo "<a href='miperfil.php'><button class='boton2'>Mi perfil</button></a>";
                 echo "<a href='includes/logout.inc.php'><button class='boton2'>Log out</button></a>";
+                echo "<a class='a-button' href='carrito.php'><button class='boton2'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i> Carrito</button></a>";
             }else{
                 echo "<a class='a-button' href='login.php'>
                 <button class='boton2'>
