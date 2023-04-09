@@ -139,6 +139,7 @@
             /* ajax para ingresar datos a carrito del cliente */
             $("#comidas-div").on("click", ".order-button", function(e){
                 var idProducto = $(this).attr("id");
+
                 e.preventDefault();
 
                 $.ajax({
