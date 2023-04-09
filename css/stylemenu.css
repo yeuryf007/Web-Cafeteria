@@ -21,7 +21,6 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
-    justify-content: space-between;
 }
 
 .a-button{
@@ -236,8 +235,8 @@ ul{
 
 #navgen{
     font-size: x-large;
-    margin-right: 10px;
-    justify-content: space-between;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 footer{

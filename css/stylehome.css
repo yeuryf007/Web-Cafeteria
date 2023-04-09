@@ -23,7 +23,6 @@ header{
     position: fixed;
     background-color: #342928ae;
     z-index: 999;
-    justify-content: space-between;
 }
 
 .a-button{
@@ -137,11 +136,11 @@ main p{
     border: 1px solid #FF8C42;
     border-radius: 13px;
     color: white;
-    margin: 0;
+    margin-left: 5px;
     font-size:  large;
     font-family: 'Quicksand';
+    margin: 0;
 }
-
 .boton2:hover{
     background-color: #FF8C42;
     cursor: pointer;
@@ -169,9 +168,10 @@ main p{
 
 #navgen{
     font-size: x-large;
-    margin-right: 10px;
-    justify-content: space-between;
+    margin-right: 0;
+    margin-left: auto;
 }
+
 
 footer{
     background-image: url("../imagenes/cafeteriafooter.png");

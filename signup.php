@@ -1,3 +1,7 @@
+<?php
+        include_once '/xampp/htdocs/cafe/Web-Cafeteria-1/includes/sesion.php';
+        ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

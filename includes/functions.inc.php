@@ -102,7 +102,7 @@ function loginUser($conn, $name, $password){
     else{
         session_start();
         $_SESSION["user"]= $uidExists["nombre"];
-        $GLOBALS['ids']= $uidExists["id_usuario"];
+        $_SESSION['id']= $uidExists["id_usuario"];
         header("location: ../index.php");
         exit();
     }

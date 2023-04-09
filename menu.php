@@ -1,3 +1,7 @@
+<?php
+        include_once '/xampp/htdocs/cafe/Web-Cafeteria-1/includes/sesion.php';
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,13 @@
         
     </header>
     <main>
-    <button id="ordenar">Ordenar</button>
+        <?php
+        if (isset($_SESSION["user"])) {
+            echo "<button id='ordenar'>Ordenar</button>";
+        }
+        
+        ?>
+    
     <!--Este es el menú-->
         <div id="cuerpo">
             <div class="table">
