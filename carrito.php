@@ -47,7 +47,7 @@
             <p class="titulis">Subtotal</p>
             <p class="resultis" id="subtotal">Num subtotal</p> 
             <p class="titulis">Total</p>
-            <p class="resultis" id="total">Num total</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
+            <p class="resultis" id="total">Total + itbis</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
             <p class="titulis">Código de Promoción</p>
             <input type="text" placeholder="INSERTE CODIGO" style="width: 300px; margin-bottom:5px;">
             <button id="boton3">Aplicar</button>
