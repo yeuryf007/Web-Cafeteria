@@ -31,13 +31,6 @@
         <div id="centro">
             
         </div>
-        <div id="derecha">
-            <p class="titulis">Subtotal</p>
-            <p class="resultis" id="subtotal">Num subtotal</p> 
-            <p class="titulis">Total</p>
-            <p class="resultis" id="total">Total + itbis</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
-            <button id="checkout">Checkout</button>
-        </div>
     </main>
     <script>
         $(document).ready(function(){
@@ -50,13 +43,29 @@
                     method:"POST",
                     success:function(result)
                     {
+                        $("main").html('<div id="centro"></div>');
                         $('#centro').html(result);
+                        if (result == ""){
+                            $('#centro').html('<div class="ordenes"><div id="nomped"><p class="titulis"> No hay ningun producto en carrito </p></div></div>')
+                            $('main').append('<div id="derecha"><p class="titulis">Subtotal</p><p class="resultis" id="subtotal">Num subtotal</p> <p class="titulis">Total</p><p name="" class="resultis" id="total">Total + itbis</p><button id="checkout">Pedir</button></div>')
+                        } else {
+                            $('main').append('<div id="derecha"><p class="titulis">Subtotal</p><p class="resultis" id="subtotal">Num subtotal</p> <p class="titulis">Total</p><p name="" class="resultis" id="total">Total + itbis</p><button id="checkout">Pedir</button></div>')
+                            $.ajax({
+                                url:"includes/total.inc.php",
+                                method:"POST",
+                                success:function(result)
+                                {
+                                    $('#subtotal').html("$"+result).attr('name', result);
+                                    $('#total').html("$"+(parseFloat(result)+parseFloat(result*0.18)).toFixed(2)).attr('name', (parseFloat(result)+parseFloat(result*0.18)).toFixed(2));
+                                }
+                            });
+                        }
                     }
                 });
             }
             
             /* ajax para eliminar ordenes de carrito */
-            $("#centro").on("click", "#boton5", function(e){
+            $("main").on("click", "#boton5", function(e){
                 var clickedbuttonclass = $(this).attr('class');
                 $producto = $(this).attr('class');
                 $.ajax({
@@ -69,7 +78,7 @@
                 });
             });
 
-            $("#centro").on("click", ".minus", function(e){
+            $("main").on("click", ".minus", function(e){
                 $producto = $(this).parent().parent().find("#boton5").attr('class');
                 $.ajax({
                     url: "includes/minus.inc.php",
@@ -81,7 +90,7 @@
                 });
 			});
 
-			$("#centro").on("click", ".plus", function(e){
+			$("main").on("click", ".plus", function(e){
 				$producto = $(this).parent().parent().find("#boton5").attr('class');
                 $.ajax({
                     url: "includes/plus.inc.php",
@@ -92,6 +101,19 @@
                     }
                 });
 			});
+
+            $("main").on("click", "#checkout", function(e){
+                $total = $('#total').attr('name');
+                console.log($total);
+                $.ajax({
+                    url: "includes/checkout.inc.php",
+                    method: "POST",
+                    data: {total: $total},
+                    success: function (result) {
+                        load_data();
+                    }
+                });
+            });
         });
     </script>
 </body>

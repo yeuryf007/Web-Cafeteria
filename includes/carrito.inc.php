@@ -13,11 +13,7 @@
     $comprobarrow = mysqli_fetch_assoc($comprobarresult);
     
     if (!$comprobarrow){
-        echo '<div class="ordenes">
-                    <div id="nomped">
-                        <p class="titulis"> No hay ningun producto en carrito </p>
-                    </div>
-                </div>';
+        echo '';
     }else{
         while ($row = mysqli_fetch_assoc($result)) {
             $id_producto = $row['id_producto'];
@@ -46,5 +42,6 @@
     }
     
     mysqli_free_result($result);
-    mysqli_close($conn);    
+    mysqli_close($conn);
+    session_destroy();
 ?>
