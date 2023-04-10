@@ -56,7 +56,7 @@
                 $a = $_SESSION["id"];
                 $today = date('Y-m-d');
 
-                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND `fecha` >= '$today' ORDER BY `fecha` ASC, `hora` ASC";
+                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     echo "<table id='tabla2'>
