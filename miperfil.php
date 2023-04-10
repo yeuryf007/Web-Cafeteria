@@ -73,9 +73,6 @@
                         } else {
                         echo "No hay reservas!";
                         }
-                    } else {
-                    echo "No hay reservas!";
-                    }
             ?>
                     
                 </table>
