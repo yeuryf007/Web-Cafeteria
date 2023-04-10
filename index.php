@@ -25,6 +25,7 @@
                 if (isset($_SESSION["user"])) {
                     echo "<p id='usunom'>Bienvenido " . $_SESSION["user"]."</p>";
                 }
+                
             ?>
             <h1>Cafe Descafe</h1>
             <p>La vida es como una corriente tranquila... Está para darse sorbos pero tú eliges si la quieres solo o acompañado.</p>
