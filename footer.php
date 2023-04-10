@@ -10,12 +10,16 @@
         <a href="index.php">Home</a>
         <a href="reservaciones.php">Reservas</a>
         <a href="menu.php">Menú</a>
-        <a href="miperfil.php">Mi perfil</a>
+        <?php
+        if (isset($_SESSION["user"])) {
+                    echo "<a href='miperfil.php'>Mi perfil</a>";
+                }
+        ?>
     </div>
     <div>
         <h3>Contacto</h3>
-        <a href=""><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> Correo@correo.com</a>
-        <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 123456789</p>
+        <a href=""><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> cafedescafe@correo.com</a>
+        <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 809-555-6575</p>
         <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Calle freidy el profe, #el final</p>
     </div>
     <div>
