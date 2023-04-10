@@ -73,7 +73,7 @@ function createUser($conn, $name, $email, $password, $telefono, $direccion) {
     mysqli_stmt_bind_param($stmt, "sssss", $name, $email, $hashedPwd, $telefono, $direccion);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../login.php?");
     exit();
 }
 function emptyInputLogin($name, $password){
@@ -88,7 +88,7 @@ function emptyInputLogin($name, $password){
 function loginUser($conn, $name, $password){
     $uidExists = uidExists($conn, $name, $name);
     if($uidExists === false){
-        header("location: ../login.php?error=no existe");
+        header("location: ../login.php?error=no_existe");
         exit();
     }
     

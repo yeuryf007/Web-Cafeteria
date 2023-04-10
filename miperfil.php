@@ -107,7 +107,7 @@
                                             echo "</tr>";
                                             }
                                         echo "<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>". $filas['valor_total']."</th>"."</tr>";
-                                        }
+                                    }
                                         echo "</table>";
                                     }
                                     else {

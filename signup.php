@@ -30,15 +30,6 @@
     <main>
     <form class="formulario" action="includes/signup.inc.php" method="post">
         <div class="textbox" id="divida">
-        <input placeholder="Primer nombre..." type="text" name="name" >
-        <input placeholder="Correo..." type="email" name="email" >
-        <input placeholder="Contraseña..." type="password" name="password" >
-        <input placeholder="Verificar contraseña..." type="password" name="repassword" >
-        <input placeholder="Telefono..." type="text"  name="telefono" >
-        <input placeholder="Direccion" type="text" name="direccion" >
-        <button class="boton" name="submit" type="submit">Registrarse</button>
-        <br>
-        Ya tienes una cuenta? <a href="login.php">Ingresa aqui</a>
         <?php
       if(isset($_GET["error"])){
         if($_GET["error"]=="emptyinput"){
@@ -59,13 +50,20 @@
         else if($_GET["error"]=="nametaken"){
             echo "<p> Ya ese nombre se encuentra registrado </p>";
         }
-        else if($_GET["error"]=="none"){
-            echo "<p> Usuario registrado </p>";
-        }
 
       }
       
-      ?>    
+      ?>   
+        <input placeholder="Primer nombre..." type="text" name="name" >
+        <input placeholder="Correo..." type="email" name="email" >
+        <input placeholder="Contraseña..." type="password" name="password" >
+        <input placeholder="Verificar contraseña..." type="password" name="repassword" >
+        <input placeholder="Telefono..." type="text"  name="telefono" >
+        <input placeholder="Direccion" type="text" name="direccion" >
+        <button class="boton" name="submit" type="submit">Registrarse</button>
+        <br>
+        Ya tienes una cuenta? <a href="login.php">Ingresa aqui</a>
+         
     </div>
         
       </form>

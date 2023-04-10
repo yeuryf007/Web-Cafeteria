@@ -30,17 +30,13 @@
     <main>
     <form class="formulario" action="includes/login.inc.php " method="post">
         <div class="textbox" id="divida">
-        <input placeholder="Nombre/Email..." type="text" name="user" >
-        <input placeholder="Contraseña..." type="password" name="password" >
-        <a class="a-button" href=""><button class="boton" name="submit" type="submit">Log in</button></a>
-        <br>
-        No tienes una cuenta? <a href="signup.php">Registrate</a>
-        </div>
-        
         <?php
       if(isset($_GET["error"])){
         if($_GET["error"]=="emptyinput"){
             echo "<p> Llena todos los campos :P </p>";
+        }
+        else if($_GET["error"]=="no_existe"){
+            echo "<p> Usuario no existe >:c </p>";
         }
         else if($_GET["error"]=="wronglogin"){
             echo "<p> Informacion de Log in incorrecta >:c </p>";
@@ -49,6 +45,14 @@
       }
       
       ?>
+        <input placeholder="Nombre/Email..." type="text" name="user" >
+        <input placeholder="Contraseña..." type="password" name="password" >
+        <a class="a-button" href=""><button class="boton" name="submit" type="submit">Log in</button></a>
+        <br>
+        No tienes una cuenta? <a href="signup.php">Registrate</a>
+        </div>
+        
+        
       </form>
     </main>
 </body>

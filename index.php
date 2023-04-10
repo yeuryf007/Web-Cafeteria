@@ -30,7 +30,13 @@
             <h1>Cafe Descafe</h1>
             <p>La vida es como una corriente tranquila... Está para darse sorbos pero tú eliges si la quieres solo o acompañado.</p>
             <a class="a-button" href="menu.php"><button class="boton3">Menú</button></a>
-            <a class="a-button" href="reservas.php"><button class="boton3">Reservas</button></a>
+            <?php
+                if (isset($_SESSION["user"])) {
+                    echo "<a class='a-button' href='reservaciones.php'><button class='boton3'>Reservas</button></a>";
+                }
+                
+            ?>
+            
         </div>
     </header>
     <main>

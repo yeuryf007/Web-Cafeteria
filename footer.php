@@ -8,10 +8,12 @@
     <div>
         <h3>Navegación</h3> 
         <a href="index.php">Home</a>
-        <a href="reservaciones.php">Reservas</a>
         <a href="menu.php">Menú</a>
+        
+        
         <?php
         if (isset($_SESSION["user"])) {
+                    echo "<a href='reservaciones.php'>Reservas</a>";
                     echo "<a href='miperfil.php'>Mi perfil</a>";
                 }
         ?>
@@ -20,7 +22,7 @@
         <h3>Contacto</h3>
         <a href=""><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> cafedescafe@correo.com</a>
         <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 809-555-6575</p>
-        <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Calle freidy el profe, #el final</p>
+        <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Av. Bolivar, #45</p>
     </div>
     <div>
         <h3>Redes sociales</h3>
