@@ -51,11 +51,11 @@
 
                 
                     <?php
-                    //$sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
+                    //
                 require_once 'includes/dbh.inc.php';
                 include_once 'includes/sesion.php';
                 $a = $_SESSION["id"];
-                    $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
+                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         echo "<table id='tabla2'>

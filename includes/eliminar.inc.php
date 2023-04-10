@@ -11,5 +11,5 @@
 
     mysqli_free_result($comprobarresult);
     mysqli_close($conn);
-    session_destroy();
+
 ?>

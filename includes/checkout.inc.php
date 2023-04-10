@@ -6,7 +6,7 @@
     $total = isset($_POST['total'])?$_POST['total']:'not yet';
     $usuario = $_SESSION['id'];
 
-    $sql1 = "SELECT * FROM `orden_carrito`, `productos` WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = `productos`.`id_producto`";
+    $sql1 = "SELECT `orden_carrito`.`id_producto`, `orden_carrito`.`cantidad` FROM `orden_carrito`, `productos` WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = `productos`.`id_producto`";
 
     $result = mysqli_query($conn, $sql1);
 
@@ -32,5 +32,4 @@
 
     mysqli_free_result($result);
     mysqli_close($conn);
-    session_destroy();
 ?>
