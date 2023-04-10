@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2023 a las 09:05:15
+-- Tiempo de generación: 11-04-2023 a las 00:55:22
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -28,10 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `detalle_orden` (
+  `id_detalle` int(11) NOT NULL,
   `id_pedido` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_orden`
+--
+
+INSERT INTO `detalle_orden` (`id_detalle`, `id_pedido`, `id_producto`, `cantidad`) VALUES
+(14, 45, 16, 1),
+(15, 46, 16, 2),
+(16, 46, 12, 3),
+(17, 47, 1, 4),
+(18, 48, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -56,10 +68,19 @@ CREATE TABLE `pedidos` (
   `id_pedido` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `fecha` date NOT NULL,
-  `tipo_pago` varchar(20) NOT NULL,
   `estado` varchar(20) NOT NULL DEFAULT 'PENDIENTE',
   `valor_total` decimal(10,2) NOT NULL DEFAULT 0.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_pedido`, `id_usuario`, `fecha`, `estado`, `valor_total`) VALUES
+(45, 2, '2023-04-10', 'PENDIENTE', '59.00'),
+(46, 2, '2023-04-10', 'PENDIENTE', '295.00'),
+(47, 2, '2023-04-10', 'PENDIENTE', '236.00'),
+(48, 2, '2023-04-10', 'PENDIENTE', '177.00');
 
 -- --------------------------------------------------------
 
@@ -71,36 +92,35 @@ CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `descripcion` text DEFAULT NULL,
-  `stock` int(11) NOT NULL DEFAULT 0
+  `descripcion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `descripcion`, `stock`) VALUES
-(1, 'Ensalada de tomate y cebolla', '50.00', 'entrada', 10),
-(2, 'Ensalada de col y zanahoria', '50.00', 'entrada', 10),
-(3, 'Ensalada de lechuga y pepino', '50.00', 'entrada', 10),
-(4, 'Ensalada de espinaca y aguacate', '50.00', 'entrada', 10),
-(5, 'Ensalada de lechuga y tomate', '50.00', 'entrada', 10),
-(6, 'Pollo a la plancha', '100.00', 'plato fuerte', 10),
-(8, 'Carne asada', '100.00', 'plato fuerte', 10),
-(9, 'Filete de pescado', '100.00', 'plato fuerte', 10),
-(10, 'Chuleta de cerdo', '100.00', 'plato fuerte', 10),
-(11, 'Chuleta de res', '100.00', 'plato fuerte', 10),
-(12, 'Brownie de chocolate', '50.00', 'postre', 10),
-(13, 'Galletas de avena con pasas', '50.00', 'postre', 10),
-(14, 'Helado de vainilla con caramelo', '50.00', 'postre', 10),
-(15, 'Jugo de naranja', '50.00', 'bebida', 10),
-(16, 'Jugo de piña', '50.00', 'bebida', 10),
-(17, 'Jugo de mango', '50.00', 'bebida', 10),
-(18, 'Jugo de papaya', '50.00', 'bebida', 10),
-(19, 'Jugo de uva', '50.00', 'bebida', 10),
-(20, 'Arroz', '50.00', 'extra', 10),
-(21, 'Papas fritas', '50.00', 'extra', 10),
-(22, 'Plátano frito', '50.00', 'extra', 10);
+INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `descripcion`) VALUES
+(1, 'Ensalada de tomate y cebolla', '50.00', 'entrada'),
+(2, 'Ensalada de col y zanahoria', '50.00', 'entrada'),
+(3, 'Ensalada de lechuga y pepino', '50.00', 'entrada'),
+(4, 'Ensalada de espinaca y aguacate', '50.00', 'entrada'),
+(5, 'Ensalada de lechuga y tomate', '50.00', 'entrada'),
+(6, 'Pollo a la plancha', '100.00', 'plato fuerte'),
+(8, 'Carne asada', '100.00', 'plato fuerte'),
+(9, 'Filete de pescado', '100.00', 'plato fuerte'),
+(10, 'Chuleta de cerdo', '100.00', 'plato fuerte'),
+(11, 'Chuleta de res', '100.00', 'plato fuerte'),
+(12, 'Brownie de chocolate', '50.00', 'postre'),
+(13, 'Galletas de avena con pasas', '50.00', 'postre'),
+(14, 'Helado de vainilla con caramelo', '50.00', 'postre'),
+(15, 'Jugo de naranja', '50.00', 'bebida'),
+(16, 'Jugo de piña', '50.00', 'bebida'),
+(17, 'Jugo de mango', '50.00', 'bebida'),
+(18, 'Jugo de papaya', '50.00', 'bebida'),
+(19, 'Jugo de uva', '50.00', 'bebida'),
+(20, 'Arroz', '50.00', 'extra'),
+(21, 'Papas fritas', '50.00', 'extra'),
+(22, 'Plátano frito', '50.00', 'extra');
 
 -- --------------------------------------------------------
 
@@ -116,6 +136,13 @@ CREATE TABLE `reservaciones` (
   `hora` time NOT NULL,
   `mensaje` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reservaciones`
+--
+
+INSERT INTO `reservaciones` (`id_reservacion`, `id_usuario`, `nropersonas`, `fecha`, `hora`, `mensaje`) VALUES
+(20, 2, 12, '2023-04-19', '14:55:00', 'La mejor mesa del local, con vistas por las ventanas.');
 
 -- --------------------------------------------------------
 
@@ -149,7 +176,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `contrasena`, `telefono`, `corre
 -- Indices de la tabla `detalle_orden`
 --
 ALTER TABLE `detalle_orden`
-  ADD PRIMARY KEY (`id_pedido`,`id_producto`),
+  ADD PRIMARY KEY (`id_detalle`),
   ADD KEY `id_pedido` (`id_pedido`),
   ADD KEY `id_producto` (`id_producto`);
 
@@ -192,16 +219,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `detalle_orden`
+--
+ALTER TABLE `detalle_orden`
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT de la tabla `orden_carrito`
 --
 ALTER TABLE `orden_carrito`
-  MODIFY `id_orden` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_orden` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -213,7 +246,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `reservaciones`
 --
 ALTER TABLE `reservaciones`
-  MODIFY `id_reservacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reservacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
