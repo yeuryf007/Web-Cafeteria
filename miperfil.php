@@ -51,6 +51,7 @@
 
                 
                     <?php
+                    //$sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
                 require_once 'includes/dbh.inc.php';
                 include_once 'includes/sesion.php';
                 $a = $_SESSION["id"];
@@ -72,6 +73,9 @@
                         } else {
                         echo "No hay reservas!";
                         }
+                    } else {
+                    echo "No hay reservas!";
+                    }
             ?>
                     
                 </table>
