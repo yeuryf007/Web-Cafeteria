@@ -10,15 +10,13 @@
     $comprobarresult = mysqli_query($conn, $comprobarsql);
     $comprobarrow = mysqli_fetch_assoc($comprobarresult);
 
-    if ($comprobarrow) {
-        $cantidad = $comprobarrow['cantidad'];
-        $cantidad = $cantidad + 1;
-        $sql = "UPDATE `orden_carrito` SET `cantidad` = '$cantidad' WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = '$producto'";
-    } else {
-        $sql = "INSERT INTO `orden_carrito` (`id_usuario`, `id_producto`, `cantidad`) VALUES ('$usuario', '$producto', '1');";
-    }
+    $cantidad = $comprobarrow['cantidad'];
+    $cantidad = $cantidad + 1;
+    $sql = "UPDATE `orden_carrito` SET `cantidad` = '$cantidad' WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = '$producto'";
     
     $result = mysqli_query($conn, $sql);
 
     mysqli_free_result($result);
     mysqli_close($conn);
+
+?>

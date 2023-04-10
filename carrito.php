@@ -29,57 +29,92 @@
     </header>
     <main>
         <div id="centro">
-            <div class="ordenes">
-                <div id="nomped">
-                    <p class="titulis">Nombre del producto</p>
-                    <p>Precio del producto</p>
-                    <p id="precio"></p>
-                    <button style="width: 100px;" name="eliminar" id="boton3">Eliminar</button>
-                </div>
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="number" value="1" id="num">
-                    <span class="plus">+</span>
-                </div>
-            </div>
-        </div>
-        <div id="derecha">
-            <p class="titulis">Subtotal</p>
-            <p class="resultis" id="subtotal">Num subtotal</p> 
-            <p class="titulis">Total</p>
-            <p class="resultis" id="total">Total + itbis</p> <!-- Precio total, si quieren le ponemos el 18% diuna ve -->
-            <p class="titulis">Código de Promoción</p>
-            <input type="text" placeholder="INSERTE CODIGO" style="width: 300px; margin-bottom:5px;">
-            <button id="boton3">Aplicar</button>
-            <button id="checkout">Checkout</button>
+            
         </div>
     </main>
     <script>
         $(document).ready(function(){
+            load_data();
             /* ajax para imprimir ordenes de carrito */
-            var clickedbuttonid = $(this).attr('id');
-            console.log($(this).attr('id'));
-            $.ajax({
-                url: "includes/carrito.inc.php",
-                success: function (result) {
-                    $('#centro').html(result);
-                }
+            function load_data()
+            {
+                $.ajax({
+                    url:"includes/carrito.inc.php",
+                    method:"POST",
+                    success:function(result)
+                    {
+                        $("main").html('<div id="centro"></div>');
+                        $('#centro').html(result);
+                        if (result == ""){
+                            $('#centro').html('<div class="ordenes"><div id="nomped"><p class="titulis"> No hay ningun producto en carrito </p></div></div>')
+                            $('main').append('<div id="derecha"><p class="titulis">Subtotal</p><p class="resultis" id="subtotal">Num subtotal</p> <p class="titulis">Total</p><p name="" class="resultis" id="total">Total + itbis</p><button id="checkout">Pedir</button></div>')
+                        } else {
+                            $('main').append('<div id="derecha"><p class="titulis">Subtotal</p><p class="resultis" id="subtotal">Num subtotal</p> <p class="titulis">Total</p><p name="" class="resultis" id="total">Total + itbis</p><button id="checkout">Pedir</button></div>')
+                            $.ajax({
+                                url:"includes/total.inc.php",
+                                method:"POST",
+                                success:function(result)
+                                {
+                                    $('#subtotal').html("$"+result).attr('name', result);
+                                    $('#total').html("$"+(parseFloat(result)+parseFloat(result*0.18)).toFixed(2)).attr('name', (parseFloat(result)+parseFloat(result*0.18)).toFixed(2));
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+            
+            /* ajax para eliminar ordenes de carrito */
+            $("main").on("click", "#boton5", function(e){
+                var clickedbuttonclass = $(this).attr('class');
+                $producto = $(this).attr('class');
+                $.ajax({
+                    url: "includes/eliminar.inc.php",
+                    method: "POST",
+                    data: {idP: $producto},
+                    success: function (result) {
+                        load_data();
+                    }
+                });
+            });
+
+            $("main").on("click", ".minus", function(e){
+                $producto = $(this).parent().parent().find("#boton5").attr('class');
+                $.ajax({
+                    url: "includes/minus.inc.php",
+                    method: "POST",
+                    data: {idP: $producto},
+                    success: function (result) {
+                        load_data();
+                    }
+                });
+			});
+
+			$("main").on("click", ".plus", function(e){
+				$producto = $(this).parent().parent().find("#boton5").attr('class');
+                $.ajax({
+                    url: "includes/plus.inc.php",
+                    method: "POST",
+                    data: {idP: $producto},
+                    success: function (result) {
+                        load_data();
+                    }
+                });
+			});
+
+            $("main").on("click", "#checkout", function(e){
+                $total = $('#total').attr('name');
+                console.log($total);
+                $.ajax({
+                    url: "includes/checkout.inc.php",
+                    method: "POST",
+                    data: {total: $total},
+                    success: function (result) {
+                        load_data();
+                    }
+                });
             });
         });
-			$('.minus').click(function () {
-				var $input = $(this).parent().find('input');
-				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
-				$input.val(count);
-				$input.change();
-				return false;
-			});
-			$('.plus').click(function () {
-				var $input = $(this).parent().find('input');
-				$input.val(parseInt($input.val()) + 1);
-				$input.change();
-				return false;
-			});
     </script>
 </body>
     <?php

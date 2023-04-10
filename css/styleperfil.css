@@ -102,24 +102,6 @@ body::-webkit-scrollbar {
     float: right;
 }
 
-.fotose{
-    max-width: 400px;
-    max-height: 400px;
-    transition: transform .5s ease-in-out;
-    overflow: hidden;
-    border-radius: 9px;
-    margin-bottom: 1.5%;
-    margin-right: 1.5%;
-}
-
-.fotose:hover{
-    transform: scale(1.1);
-}
-
-.fotosehide{
-    opacity: 0;
-}
-
 #infgen{
     font-size: large;
     font-family: 'Quicksand';
@@ -127,7 +109,7 @@ body::-webkit-scrollbar {
     text-justify: distribute;
 }
 
-#fotos{
+#histo{
     transition: 0.2s all linear;
     margin-bottom: 2%;
 }
