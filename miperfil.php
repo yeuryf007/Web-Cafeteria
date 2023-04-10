@@ -50,28 +50,30 @@
                 <h1>Reservaciones</h1>
 
                 
-                    <?php
-            require_once 'includes/dbh.inc.php';
-            include_once 'includes/sesion.php';
-            $a = $_SESSION["id"];
-                    $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) > 0) {
-                        echo "<table id='tabla2'>
-                    <tr>
-                        <th>Día</th>
-                        <th>Núm. personas</th>
-                        <th>Hora</th>
-                        <th>Comentarios especiales</th>
-                    </tr>";
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>";
-                            echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
-                            echo "</tr>";
-                            }
-                        } else {
-                        echo "No hay reservas!";
+            <?php
+                require_once 'includes/dbh.inc.php';
+                include_once 'includes/sesion.php';
+                $a = $_SESSION["id"];
+                $today = date('Y-m-d');
+
+                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND `fecha` >= '$today' ORDER BY `fecha` ASC, `hora` ASC";
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<table id='tabla2'>
+                <tr>
+                    <th>Día</th>
+                    <th>Núm. personas</th>
+                    <th>Hora</th>
+                    <th>Comentarios especiales</th>
+                </tr>";
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
+                        echo "</tr>";
                         }
+                    } else {
+                    echo "No hay reservas!";
+                    }
             ?>
                     
                 </table>

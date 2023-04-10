@@ -7,7 +7,6 @@
 
     $sql = "SELECT * FROM `orden_carrito`, `productos` WHERE `orden_carrito`.`id_usuario` = '$usuario' AND `orden_carrito`.`id_producto` = `productos`.`id_producto`";
     
-    echo $sql;
     $result = mysqli_query($conn, $sql);
     
     while ($row = mysqli_fetch_assoc($result)) {
