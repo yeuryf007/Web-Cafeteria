@@ -1,7 +1,6 @@
 #centro{
     display: flex;
     flex-direction: column;
-    width: 70%;
 }
 #derecha{
     display: flex;
@@ -23,6 +22,7 @@ main{
     display: flex;
     flex-direction: row;
     font-family: 'Quicksand';
+    justify-content: space-around;
 }
 
 .ordenes{
@@ -37,6 +37,7 @@ main{
     padding: 10px;
     border-radius: 9px;
     background-color: white;
+    justify-content: space-around;
 }
 
 .ordenes:last-child{
@@ -118,7 +119,7 @@ body::-webkit-scrollbar {
     background-color: #a15628;    /* color of the scroll thumb */
   }
 
-#boton3{
+#boton5{
     background-color: #ff8a42a5;
     width: 100px;
     height: 40px;
@@ -130,7 +131,7 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 
-#boton3:hover{
+#boton5:hover{
     background-color: #ffd3b7;
     cursor: pointer;
 }

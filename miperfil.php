@@ -49,7 +49,6 @@
             <div class="userinfo" id="reserv">
                 <h1>Reservaciones</h1>
                     <?php
-                    
                 require_once 'includes/dbh.inc.php';
                 include_once 'includes/sesion.php';
                 $a = $_SESSION["id"];
