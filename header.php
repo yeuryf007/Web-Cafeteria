@@ -1,6 +1,6 @@
 
 <div class="topbar">
-            <div style="display:flex; flex-direction:row; align-items:center; height:59px;" class="logo"><img src="imagenes/logo.png" style="height: 59px; rotate: 90deg; margin-left:100px;" alt=""><h3>Cafe Descafe</h3> </div>
+            <div style="display:flex; flex-direction:row; align-items:center; height:50px;" class="logo"><img src="imagenes/logo.png" style="height: 50px; rotate: 90deg; margin-left:100px;" alt=""><h3>Cafe Descafe</h3> </div>
             
             <nav class="nav" id="navgen">
             <a href="index.php"><button class="boton1">Home</button></a>
