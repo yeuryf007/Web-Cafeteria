@@ -38,7 +38,7 @@
         <div id="izq">
             <button id="boton3" onclick="scrollToElement('infgen', 50)">Sobre mí</button>
             <button id="boton3" onclick="scrollToElement('reserv', 50)">Reservaciones</button>
-            <button id="boton3" onclick="scrollToElement('fotos', 50)">Fotos</button>
+            <button id="boton3" onclick="scrollToElement('histo', 50)">Historial de pedidos</button>
         </div>
         <div id="centro">
             <div class="userinfo" id="infgen">
@@ -50,26 +50,28 @@
                 <h1>Reservaciones</h1>
 
                 
-            <?php
+                    <?php
+                    //$sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
                 require_once 'includes/dbh.inc.php';
                 include_once 'includes/sesion.php';
                 $a = $_SESSION["id"];
-                $today = date('Y-m-d');
-
-                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
-                $result = mysqli_query($conn, $sql);
-                if (mysqli_num_rows($result) > 0) {
-                    echo "<table id='tabla2'>
-                <tr>
-                    <th>Día</th>
-                    <th>Núm. personas</th>
-                    <th>Hora</th>
-                    <th>Comentarios especiales</th>
-                </tr>";
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
-                        echo "</tr>";
+                    $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
+                    $result = mysqli_query($conn, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        echo "<table id='tabla2'>
+                    <tr>
+                        <th>Día</th>
+                        <th>Núm. personas</th>
+                        <th>Hora</th>
+                        <th>Comentarios especiales</th>
+                    </tr>";
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
+                            echo "</tr>";
+                            }
+                        } else {
+                        echo "No hay reservas!";
                         }
                     } else {
                     echo "No hay reservas!";
@@ -79,14 +81,32 @@
                 </table>
             </div>
             
-            <div class="userinfo" id="fotos">
-                <h1>Fotos</h1>
-                <div id="fotes">
-                    <a href="imagenes/epagueti.jpg"> <img src="imagenes/epagueti.jpg" class="fotose"></a>
-                    <a href="imagenes/espaguet.jpg"> <img src="imagenes/espaguet.jpg" class="fotose"></a>
-                    <a href="imagenes/frito.jpg"> <img src="imagenes/frito.jpg" class="fotose"> </a>
-                    <a href="imagenes/pisa.jpg"> <img src="imagenes/pisa.jpg" class="fotose"></a>
-                    <a href="imagenes/sanguchito.jpg"> <img src="imagenes/sanguchito.jpg" class="fotose"></a>
+            <div class="userinfo" id="histo">
+                <h1>Historial de pedidos</h1>
+                <div id="tabpeds">
+                    <table id="tabla2">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Precio Total</th>
+                        </tr>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Cafe</td>
+                            <td>50</td>
+                            <td>2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Platano</td>
+                            <td>20</td>
+                            <td>4</td>
+                            <td><strong>180 RD$</strong></td>
+                        </tr>
+                    </table>
                 </div>
                 
             </div>
