@@ -48,13 +48,13 @@
             </div>
             <div class="userinfo" id="reserv">
                 <h1>Reservaciones</h1>
-
-                
                     <?php
+                    
                 require_once 'includes/dbh.inc.php';
                 include_once 'includes/sesion.php';
                 $a = $_SESSION["id"];
-                    $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a'";
+                $sql= "SELECT * FROM `reservaciones` WHERE `id_usuario` = '$a' AND (`fecha` > NOW() OR (`fecha` = CURDATE() AND `hora` >= CURTIME())) ORDER BY `fecha` ASC, `hora` ASC";
+
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         echo "<table id='tabla2'>
@@ -69,44 +69,58 @@
                             echo  "<th>". $row['fecha'] . "</th>" . "<th>" . $row['nropersonas'] . "</th>" . "<th>".$row['hora']. "</th>" . "<th>". $row['mensaje']. "</th>";
                             echo "</tr>";
                             }
+                            echo "</table>";
                         } else {
                         echo "No hay reservas!";
                         }
-            ?>
+                        ?>
                     
-                </table>
+                    
             </div>
             
-            <div class="userinfo" id="histo">
-                <h1>Historial de pedidos</h1>
-                <div id="tabpeds">
-                    <table id="tabla2">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Precio Total</th>
-                        </tr>
-                        <tr>
-                            <td><strong>1</strong></td>
-                            <td>Cafe</td>
-                            <td>50</td>
-                            <td>2</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Platano</td>
-                            <td>20</td>
-                            <td>4</td>
-                            <td><strong>180 RD$</strong></td>
-                        </tr>
-                    </table>
-                </div>
+                    <div class="userinfo" id="histo">
+                        <h1>Historial de pedidos</h1>
+                        <?php
+                            require_once 'includes/dbh.inc.php';
+                            include_once 'includes/sesion.php';
+                            $a = $_SESSION["id"];
+                                $sql= "SELECT * FROM `pedidos` WHERE `id_usuario` = '$a'";
+                                $pedidos = mysqli_query($conn, $sql);
+                                if (mysqli_num_rows($pedidos) > 0) {
+                                    echo "<div id='tabpeds'>
+                                    <table id='tabla2'>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio Total</th>
+                                        </tr>";
+                                        
+                                    while ($filas = mysqli_fetch_assoc($pedidos)){
+                                        echo "<tr>". "<th>". $filas['id_pedido']."</th>";
+                                        $b = $filas['id_pedido'];
+                                        $sql2="SELECT nombre, precio, cantidad FROM `pedidos`, `detalle_orden`, `Productos` WHERE `pedidos`.`id_pedido` = '$b' AND `detalle_orden`.`id_pedido` = '$b' AND `id_usuario` = '$a' AND `detalle_orden`.`id_producto` = `productos`.`id_producto`";
+                                        $mitad = mysqli_query($conn, $sql2);
+                                        while ($row = mysqli_fetch_assoc($mitad)) {
+                                            echo "<tr>";
+                                            echo  "<th>" . " ". "</th>"."<th>". $row['nombre'] . "</th>" . "<th>" . $row['precio'] . "</th>" . "<th>".$row['cantidad']. "</th>". "<th>" . " ". "</th>";
+                                            echo "</tr>";
+                                            }
+                                        echo "<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>" . " ". "</th>"."<th>". $filas['valor_total']."</th>"."</tr>";
+                                        }
+                                        echo "</table>";
+                                    }
+                                    else {
+                                    echo "No hay pedidos!";
+                                    }
+            
+                        ?>
+                    
+                            
+                    
+                    </div>
                 
-            </div>
-            <button onclick="myFunction()" id="boton3">Mostrar o esconder fotos</button>
         </div>
     </main>
     <script>
